@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: Scooter0888/bellevue-moving-sale
+  name: git-gateway
   branch: main
 
 media_folder: "images/items"

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — Moving Sale</title>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+</head>
+<body>
+  <script>
+    // Custom widget to auto-generate slug from title
+    CMS.registerEventListener({
+      name: 'preSave',
+      handler: ({ entry }) => {
+        const title = entry.get('data').get('title');
+        if (title) {
+          const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+          return entry.get('data').set('slug', slug);
+        }
+      },
+    });
+  </script>
+</body>
+</html>

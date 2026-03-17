@@ -1,0 +1,48 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/items"
+public_folder: "/images/items"
+
+collections:
+  - name: "items"
+    label: "Sale Items"
+    label_singular: "Item"
+    folder: "content/items"
+    create: true
+    delete: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    summary: "{{title}} — ${{price}} {{#if sold}}[SOLD]{{/if}}"
+    sortable_fields: ["title", "price", "category"]
+    fields:
+      - { label: "Title", name: "title", widget: "string", hint: "e.g. IKEA KALLAX Shelf" }
+      - { label: "Slug", name: "slug", widget: "string", hint: "Auto-generated from title. Leave as-is.", required: false }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - "Furniture"
+          - "Electronics"
+          - "Kitchen"
+          - "Other"
+      - { label: "Price ($)", name: "price", widget: "number", value_type: "int", min: 0, hint: "Asking price in USD" }
+      - label: "Condition"
+        name: "condition"
+        widget: "select"
+        options:
+          - "New"
+          - "Like New"
+          - "Good"
+          - "Fair"
+          - "Used"
+      - { label: "Description", name: "description", widget: "text", hint: "Describe the item — dimensions, brand, any flaws, etc." }
+      - label: "Photos"
+        name: "images"
+        widget: "list"
+        field: { label: "Image", name: "image", widget: "image" }
+        hint: "Upload one or more photos. First photo is the cover image."
+      - { label: "Sold", name: "sold", widget: "boolean", default: false, hint: "Toggle when item is sold" }
+      - { label: "Sort Order", name: "order", widget: "number", default: 0, hint: "Higher numbers appear first. Use this to feature items at the top.", required: false }

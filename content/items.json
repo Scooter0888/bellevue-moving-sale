@@ -1,0 +1,13 @@
+[
+  {
+    "title": "Sample Item — Delete Me",
+    "slug": "sample-item",
+    "category": "Other",
+    "price": 25,
+    "condition": "Good",
+    "description": "This is a sample item to show how the site works. Delete this and add your real items via the /admin panel.",
+    "images": ["/images/placeholder.svg"],
+    "sold": false,
+    "order": 1
+  }
+]

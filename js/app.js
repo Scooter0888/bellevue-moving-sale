@@ -4,22 +4,6 @@
 
 const PHONE = '+12065937974';
 const EMAIL = 'cuttingthrough8@gmail.com';
-const DEADLINE = new Date('2026-05-10T23:59:59');
-
-// --- Countdown ---
-function updateCountdown() {
-  const now = new Date();
-  const diff = DEADLINE - now;
-  if (diff <= 0) {
-    document.getElementById('countdown').textContent = 'Sale has ended!';
-    return;
-  }
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  document.getElementById('countdown').textContent = `${days} day${days !== 1 ? 's' : ''} left!`;
-}
-updateCountdown();
-setInterval(updateCountdown, 60000);
-
 // --- Load Items ---
 let allItems = [];
 

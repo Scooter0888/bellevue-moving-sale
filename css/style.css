@@ -40,26 +40,6 @@ body {
   padding: 0 20px;
 }
 
-/* Urgency Banner */
-.urgency-banner {
-  background: linear-gradient(135deg, var(--red), #b91c1c);
-  color: white;
-  text-align: center;
-  padding: 12px 20px;
-  font-size: 0.95rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.urgency-text {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 /* Header */
 .header {
   text-align: center;

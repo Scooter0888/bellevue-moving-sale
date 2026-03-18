@@ -1,11 +1,437 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin — Moving Sale</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #f5f5f5; color: #1a1a2e; }
+
+    /* Login */
+    .login-screen { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+    .login-box { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); width: 100%; max-width: 360px; }
+    .login-box h1 { font-size: 1.5rem; margin-bottom: 20px; text-align: center; }
+    .login-box input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; margin-bottom: 12px; font-family: inherit; }
+    .login-box button { width: 100%; padding: 12px; background: #2563eb; color: white; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; font-family: inherit; }
+    .login-box button:hover { background: #1d4ed8; }
+    .login-error { color: #dc2626; font-size: 0.875rem; margin-bottom: 8px; text-align: center; }
+
+    /* Admin layout */
+    .admin { display: none; }
+    .admin.active { display: block; }
+    .admin-header { background: white; border-bottom: 1px solid #e5e7eb; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 10; }
+    .admin-header h1 { font-size: 1.2rem; }
+    .admin-header .actions { display: flex; gap: 8px; }
+    .btn { padding: 8px 16px; border-radius: 8px; font-size: 0.875rem; font-weight: 600; cursor: pointer; border: none; font-family: inherit; transition: background 0.2s; }
+    .btn-primary { background: #2563eb; color: white; }
+    .btn-primary:hover { background: #1d4ed8; }
+    .btn-danger { background: #dc2626; color: white; }
+    .btn-danger:hover { background: #b91c1c; }
+    .btn-secondary { background: #e5e7eb; color: #1a1a2e; }
+    .btn-secondary:hover { background: #d1d5db; }
+    .btn-success { background: #16a34a; color: white; }
+    .btn-success:hover { background: #15803d; }
+
+    /* Items list */
+    .items-list { max-width: 900px; margin: 24px auto; padding: 0 16px; }
+    .item-row { background: white; border-radius: 8px; padding: 16px; margin-bottom: 12px; display: flex; align-items: center; gap: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .item-row img { width: 80px; height: 60px; object-fit: cover; border-radius: 6px; background: #f0f0f0; }
+    .item-row .info { flex: 1; }
+    .item-row .info h3 { font-size: 1rem; margin-bottom: 2px; }
+    .item-row .info .meta { font-size: 0.8rem; color: #6b7280; }
+    .item-row .price { font-weight: 700; color: #16a34a; font-size: 1.1rem; min-width: 80px; text-align: right; }
+    .item-row .price.sold { color: #dc2626; text-decoration: line-through; }
+    .item-row .row-actions { display: flex; gap: 6px; }
+    .empty-state { text-align: center; padding: 60px 20px; color: #6b7280; }
+
+    /* Edit form */
+    .edit-panel { display: none; max-width: 640px; margin: 24px auto; padding: 0 16px; }
+    .edit-panel.active { display: block; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-weight: 600; font-size: 0.875rem; margin-bottom: 4px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 0.95rem; font-family: inherit;
+    }
+    .form-group textarea { min-height: 100px; resize: vertical; }
+    .form-group .hint { font-size: 0.75rem; color: #6b7280; margin-top: 2px; }
+
+    /* Image upload */
+    .image-uploads { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+    .image-thumb { position: relative; width: 100px; height: 75px; border-radius: 6px; overflow: hidden; background: #f0f0f0; }
+    .image-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .image-thumb .remove-img { position: absolute; top: 2px; right: 2px; width: 22px; height: 22px; background: rgba(220,38,38,0.9); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 0.7rem; display: flex; align-items: center; justify-content: center; }
+    .add-image-btn { width: 100px; height: 75px; border: 2px dashed #ccc; border-radius: 6px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #aaa; font-size: 1.5rem; background: none; font-family: inherit; }
+    .add-image-btn:hover { border-color: #2563eb; color: #2563eb; }
+
+    .form-actions { display: flex; gap: 8px; margin-top: 24px; padding-bottom: 40px; }
+    .sold-toggle { display: flex; align-items: center; gap: 8px; }
+    .sold-toggle input[type="checkbox"] { width: 20px; height: 20px; }
+
+    .loading-overlay { position: fixed; inset: 0; background: rgba(255,255,255,0.8); display: none; align-items: center; justify-content: center; z-index: 100; font-weight: 600; font-size: 1.1rem; }
+    .loading-overlay.active { display: flex; }
+    .toast { position: fixed; bottom: 20px; right: 20px; background: #1a1a2e; color: white; padding: 12px 20px; border-radius: 8px; font-size: 0.9rem; z-index: 200; display: none; }
+    .toast.active { display: block; }
+
+    @media (max-width: 600px) {
+      .item-row { flex-wrap: wrap; }
+      .item-row .row-actions { width: 100%; justify-content: flex-end; }
+    }
+  </style>
 </head>
 <body>
-  <script src="https://unpkg.com/netlify-cms@2.10.192/dist/netlify-cms.js"></script>
+
+  <!-- Login Screen -->
+  <div class="login-screen" id="loginScreen">
+    <div class="login-box">
+      <h1>Moving Sale Admin</h1>
+      <div class="login-error" id="loginError"></div>
+      <input type="password" id="passwordInput" placeholder="Enter admin password" autofocus>
+      <button onclick="doLogin()">Log In</button>
+    </div>
+  </div>
+
+  <!-- Admin Panel -->
+  <div class="admin" id="adminPanel">
+    <div class="admin-header">
+      <h1>Moving Sale Admin</h1>
+      <div class="actions">
+        <button class="btn btn-primary" onclick="showAddForm()">+ Add Item</button>
+        <button class="btn btn-secondary" onclick="doLogout()">Log Out</button>
+      </div>
+    </div>
+
+    <!-- Items List -->
+    <div class="items-list" id="itemsList"></div>
+
+    <!-- Edit Form -->
+    <div class="edit-panel" id="editPanel">
+      <h2 id="formTitle" style="margin-bottom:20px;">Add New Item</h2>
+      <input type="hidden" id="editSlug">
+
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" id="fieldTitle" placeholder="e.g. IKEA KALLAX Shelf">
+      </div>
+
+      <div class="form-group">
+        <label>Category</label>
+        <select id="fieldCategory">
+          <option value="Furniture">Furniture</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Kitchen">Kitchen</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Price ($)</label>
+        <input type="number" id="fieldPrice" min="0" placeholder="50">
+      </div>
+
+      <div class="form-group">
+        <label>Condition</label>
+        <select id="fieldCondition">
+          <option value="New">New</option>
+          <option value="Like New">Like New</option>
+          <option value="Good">Good</option>
+          <option value="Fair">Fair</option>
+          <option value="Used">Used</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Description</label>
+        <textarea id="fieldDescription" placeholder="Describe the item — dimensions, brand, any flaws..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Photos</label>
+        <div class="hint">First photo is the cover image. Max 5MB each.</div>
+        <div class="image-uploads" id="imageUploads">
+          <button class="add-image-btn" onclick="document.getElementById('fileInput').click()">+</button>
+        </div>
+        <input type="file" id="fileInput" accept="image/*" multiple style="display:none" onchange="handleFiles(this.files)">
+      </div>
+
+      <div class="form-group">
+        <div class="sold-toggle">
+          <input type="checkbox" id="fieldSold">
+          <label for="fieldSold" style="margin-bottom:0;">Mark as SOLD</label>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn btn-success" onclick="saveItem()">Save Item</button>
+        <button class="btn btn-secondary" onclick="cancelEdit()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="loading-overlay" id="loading">Saving...</div>
+  <div class="toast" id="toast"></div>
+
+  <script>
+    const API = '/.netlify/functions/api';
+    let password = localStorage.getItem('admin_pw') || '';
+    let items = [];
+    let editImages = []; // { url, isNew, base64, filename }
+
+    // --- Auth ---
+    async function doLogin() {
+      const pw = document.getElementById('passwordInput').value;
+      const res = await fetch(`${API}/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password: pw }),
+      });
+      if (res.ok) {
+        password = pw;
+        localStorage.setItem('admin_pw', pw);
+        showAdmin();
+      } else {
+        document.getElementById('loginError').textContent = 'Wrong password. Try again.';
+      }
+    }
+
+    function doLogout() {
+      password = '';
+      localStorage.removeItem('admin_pw');
+      document.getElementById('adminPanel').classList.remove('active');
+      document.getElementById('loginScreen').style.display = 'flex';
+    }
+
+    function authHeaders() {
+      return { 'Content-Type': 'application/json', 'X-Admin-Password': password };
+    }
+
+    // --- Init ---
+    async function showAdmin() {
+      document.getElementById('loginScreen').style.display = 'none';
+      document.getElementById('adminPanel').classList.add('active');
+      await loadItems();
+    }
+
+    // Auto-login if password saved
+    (async () => {
+      if (password) {
+        const res = await fetch(`${API}/login`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ password }),
+        });
+        if (res.ok) { showAdmin(); return; }
+        localStorage.removeItem('admin_pw');
+      }
+      document.getElementById('passwordInput').addEventListener('keydown', e => { if (e.key === 'Enter') doLogin(); });
+    })();
+
+    // --- Items ---
+    async function loadItems() {
+      showLoading('Loading items...');
+      try {
+        const res = await fetch(`${API}/items`, { headers: authHeaders() });
+        items = await res.json();
+        renderItems();
+      } catch (err) {
+        toast('Error loading items');
+      }
+      hideLoading();
+    }
+
+    function renderItems() {
+      const list = document.getElementById('itemsList');
+      document.getElementById('editPanel').classList.remove('active');
+
+      if (items.length === 0) {
+        list.innerHTML = '<div class="empty-state"><p>No items yet. Click <strong>+ Add Item</strong> to get started.</p></div>';
+        return;
+      }
+
+      items.sort((a, b) => (b.order || 0) - (a.order || 0));
+      list.innerHTML = items.map(item => {
+        const img = item.images && item.images.length > 0 ? item.images[0] : '/images/placeholder.svg';
+        return `
+          <div class="item-row">
+            <img src="${img}" alt="${item.title}">
+            <div class="info">
+              <h3>${item.title} ${item.sold ? '<span style="color:#dc2626;font-size:0.75rem;">SOLD</span>' : ''}</h3>
+              <div class="meta">${item.category} &bull; ${item.condition || ''}</div>
+            </div>
+            <div class="price ${item.sold ? 'sold' : ''}">$${item.price}</div>
+            <div class="row-actions">
+              <button class="btn btn-secondary" onclick="editItem('${item.slug}')">Edit</button>
+              <button class="btn btn-danger" onclick="deleteItem('${item.slug}', '${item.title.replace(/'/g, "\\'")}')">Delete</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // --- Add / Edit ---
+    function showAddForm() {
+      document.getElementById('formTitle').textContent = 'Add New Item';
+      document.getElementById('editSlug').value = '';
+      document.getElementById('fieldTitle').value = '';
+      document.getElementById('fieldCategory').value = 'Furniture';
+      document.getElementById('fieldPrice').value = '';
+      document.getElementById('fieldCondition').value = 'Good';
+      document.getElementById('fieldDescription').value = '';
+      document.getElementById('fieldSold').checked = false;
+      editImages = [];
+      renderEditImages();
+      document.getElementById('itemsList').style.display = 'none';
+      document.getElementById('editPanel').classList.add('active');
+      document.getElementById('fieldTitle').focus();
+    }
+
+    function editItem(slug) {
+      const item = items.find(i => i.slug === slug);
+      if (!item) return;
+      document.getElementById('formTitle').textContent = 'Edit Item';
+      document.getElementById('editSlug').value = slug;
+      document.getElementById('fieldTitle').value = item.title;
+      document.getElementById('fieldCategory').value = item.category;
+      document.getElementById('fieldPrice').value = item.price;
+      document.getElementById('fieldCondition').value = item.condition || 'Good';
+      document.getElementById('fieldDescription').value = item.description || '';
+      document.getElementById('fieldSold').checked = item.sold || false;
+      editImages = (item.images || []).map(url => ({ url, isNew: false }));
+      renderEditImages();
+      document.getElementById('itemsList').style.display = 'none';
+      document.getElementById('editPanel').classList.add('active');
+    }
+
+    function cancelEdit() {
+      document.getElementById('editPanel').classList.remove('active');
+      document.getElementById('itemsList').style.display = 'block';
+    }
+
+    // --- Images ---
+    function renderEditImages() {
+      const container = document.getElementById('imageUploads');
+      container.innerHTML = editImages.map((img, i) => `
+        <div class="image-thumb">
+          <img src="${img.url || img.preview}">
+          <button class="remove-img" onclick="removeImage(${i})">&times;</button>
+        </div>
+      `).join('') + `<button class="add-image-btn" onclick="document.getElementById('fileInput').click()">+</button>`;
+    }
+
+    function removeImage(index) {
+      editImages.splice(index, 1);
+      renderEditImages();
+    }
+
+    function handleFiles(files) {
+      for (const file of files) {
+        if (file.size > 5 * 1024 * 1024) { toast('File too large (max 5MB)'); continue; }
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const base64Full = e.target.result;
+          const base64Data = base64Full.split(',')[1];
+          const ext = file.name.split('.').pop().toLowerCase();
+          const ts = Date.now();
+          const safeName = file.name.replace(/[^a-z0-9.]/gi, '-').toLowerCase();
+          const filename = `${ts}-${safeName}`;
+          editImages.push({ url: null, preview: base64Full, isNew: true, base64: base64Data, filename });
+          renderEditImages();
+        };
+        reader.readAsDataURL(file);
+      }
+      document.getElementById('fileInput').value = '';
+    }
+
+    // --- Save ---
+    async function saveItem() {
+      const title = document.getElementById('fieldTitle').value.trim();
+      if (!title) { toast('Title is required'); return; }
+      const price = parseInt(document.getElementById('fieldPrice').value) || 0;
+
+      showLoading('Saving...');
+
+      // Upload new images first
+      const imageUrls = [];
+      for (const img of editImages) {
+        if (img.isNew) {
+          try {
+            const res = await fetch(`${API}/upload`, {
+              method: 'POST',
+              headers: authHeaders(),
+              body: JSON.stringify({ filename: img.filename, data: img.base64 }),
+            });
+            const data = await res.json();
+            if (data.url) imageUrls.push(data.url);
+          } catch (err) {
+            toast('Image upload failed');
+            hideLoading();
+            return;
+          }
+        } else {
+          imageUrls.push(img.url);
+        }
+      }
+
+      const slug = document.getElementById('editSlug').value ||
+        title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+      const item = {
+        title,
+        slug,
+        category: document.getElementById('fieldCategory').value,
+        price,
+        condition: document.getElementById('fieldCondition').value,
+        description: document.getElementById('fieldDescription').value.trim(),
+        images: imageUrls,
+        sold: document.getElementById('fieldSold').checked,
+        order: document.getElementById('editSlug').value
+          ? (items.find(i => i.slug === slug)?.order || 0)
+          : (Math.max(0, ...items.map(i => i.order || 0)) + 1),
+      };
+
+      try {
+        const res = await fetch(`${API}/items`, {
+          method: 'POST',
+          headers: authHeaders(),
+          body: JSON.stringify(item),
+        });
+        if (!res.ok) throw new Error('Save failed');
+        toast('Item saved! Site will update in ~30 seconds.');
+        await loadItems();
+        cancelEdit();
+      } catch (err) {
+        toast('Error saving item');
+      }
+      hideLoading();
+    }
+
+    async function deleteItem(slug, title) {
+      if (!confirm(`Delete "${title}"? This cannot be undone.`)) return;
+      showLoading('Deleting...');
+      try {
+        await fetch(`${API}/items/${slug}`, { method: 'DELETE', headers: authHeaders() });
+        toast('Item deleted');
+        await loadItems();
+      } catch (err) {
+        toast('Error deleting item');
+      }
+      hideLoading();
+    }
+
+    // --- UI helpers ---
+    function showLoading(msg) {
+      const el = document.getElementById('loading');
+      el.textContent = msg || 'Loading...';
+      el.classList.add('active');
+    }
+    function hideLoading() { document.getElementById('loading').classList.remove('active'); }
+    function toast(msg) {
+      const el = document.getElementById('toast');
+      el.textContent = msg;
+      el.classList.add('active');
+      setTimeout(() => el.classList.remove('active'), 3000);
+    }
+  </script>
 </body>
 </html>

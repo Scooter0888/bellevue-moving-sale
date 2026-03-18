@@ -122,6 +122,7 @@
           <option value="Electronics">Electronics</option>
           <option value="Kitchen">Kitchen</option>
           <option value="Other">Other</option>
+          <option value="Coming Soon">Coming Soon</option>
         </select>
       </div>
 
@@ -153,6 +154,12 @@
           <button class="add-image-btn" onclick="document.getElementById('fileInput').click()">+</button>
         </div>
         <input type="file" id="fileInput" accept="image/*" multiple style="display:none" onchange="handleFiles(this.files)">
+      </div>
+
+      <div class="form-group" id="availableDateGroup">
+        <label>Available From</label>
+        <input type="date" id="fieldAvailableDate">
+        <div class="hint">When will this item be available for sale? Only shown for "Coming Soon" items.</div>
       </div>
 
       <div class="form-group">
@@ -279,6 +286,7 @@
       document.getElementById('fieldCondition').value = 'Good';
       document.getElementById('fieldDescription').value = '';
       document.getElementById('fieldSold').checked = false;
+      document.getElementById('fieldAvailableDate').value = '';
       editImages = [];
       renderEditImages();
       document.getElementById('itemsList').style.display = 'none';
@@ -297,6 +305,7 @@
       document.getElementById('fieldCondition').value = item.condition || 'Good';
       document.getElementById('fieldDescription').value = item.description || '';
       document.getElementById('fieldSold').checked = item.sold || false;
+      document.getElementById('fieldAvailableDate').value = item.availableDate || '';
       editImages = (item.images || []).map(url => ({ url, isNew: false }));
       renderEditImages();
       document.getElementById('itemsList').style.display = 'none';
@@ -376,15 +385,19 @@
       const slug = document.getElementById('editSlug').value ||
         title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
+      const category = document.getElementById('fieldCategory').value;
+      const availableDate = document.getElementById('fieldAvailableDate').value || '';
+
       const item = {
         title,
         slug,
-        category: document.getElementById('fieldCategory').value,
+        category,
         price,
         condition: document.getElementById('fieldCondition').value,
         description: document.getElementById('fieldDescription').value.trim(),
         images: imageUrls,
         sold: document.getElementById('fieldSold').checked,
+        availableDate: category === 'Coming Soon' ? availableDate : '',
         order: document.getElementById('editSlug').value
           ? (items.find(i => i.slug === slug)?.order || 0)
           : (Math.max(0, ...items.map(i => i.order || 0)) + 1),

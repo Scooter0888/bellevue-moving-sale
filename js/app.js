@@ -56,9 +56,14 @@ function renderItems() {
       : '/images/placeholder.svg';
     const photoCount = item.images ? item.images.length : 0;
 
+    const isComingSoon = item.category === 'Coming Soon';
+    const cardClass = item.sold ? 'sold' : (isComingSoon ? 'coming-soon' : '');
+    const availDateStr = item.availableDate ? formatDate(item.availableDate) : '';
+
     return `
-      <div class="item-card ${item.sold ? 'sold' : ''}" data-slug="${slug}" onclick="openItem('${slug}')">
+      <div class="item-card ${cardClass}" data-slug="${slug}" onclick="openItem('${slug}')">
         ${item.sold ? '<span class="sold-badge">Sold</span>' : ''}
+        ${isComingSoon && !item.sold ? '<span class="coming-soon-badge">Coming Soon</span>' : ''}
         <div class="item-image-wrap">
           <img src="${img}" alt="${item.title}" loading="lazy">
           ${photoCount > 1 ? `<span class="photo-count">${photoCount} photos</span>` : ''}
@@ -68,15 +73,22 @@ function renderItems() {
           <h3 class="item-title">${item.title}</h3>
           <div class="item-price">${item.sold ? '<s>$' + item.price + '</s> SOLD' : '$' + item.price}</div>
           <div class="item-condition">${item.condition || ''}</div>
+          ${isComingSoon && availDateStr ? `<div class="item-available-date">Available ${availDateStr}</div>` : ''}
         </div>
       </div>
     `;
   }).join('');
 }
 
-// --- Slug helper ---
+// --- Helpers ---
 function slugify(text) {
   return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
+function formatDate(dateStr) {
+  if (!dateStr) return '';
+  const d = new Date(dateStr + 'T00:00:00');
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 }
 
 // --- Open Item Modal ---
@@ -94,6 +106,10 @@ function openItem(slug) {
   document.getElementById('modalTitle').textContent = item.title;
   document.getElementById('modalPrice').textContent = item.sold ? `$${item.price} — SOLD` : `$${item.price}`;
   document.getElementById('modalCondition').textContent = item.condition ? `Condition: ${item.condition}` : '';
+  const isComingSoon = item.category === 'Coming Soon';
+  const availEl = document.getElementById('modalAvailableDate');
+  availEl.textContent = isComingSoon && item.availableDate ? `Available ${formatDate(item.availableDate)}` : '';
+  availEl.style.display = isComingSoon && item.availableDate ? 'block' : 'none';
   document.getElementById('modalDescription').textContent = item.description || '';
 
   // SMS link

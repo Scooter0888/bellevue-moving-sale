@@ -174,12 +174,21 @@ body {
   opacity: 0.65;
 }
 
-.sold-badge {
+.item-card.coming-soon {
+  opacity: 0.85;
+}
+
+.item-available-date {
+  font-size: 0.8rem;
+  color: var(--orange);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.sold-badge, .coming-soon-badge {
   position: absolute;
   top: 16px;
   left: 16px;
-  background: var(--red);
-  color: white;
   padding: 4px 14px;
   border-radius: 100px;
   font-size: 0.8rem;
@@ -187,7 +196,11 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   z-index: 2;
+  color: white;
 }
+
+.sold-badge { background: var(--red); }
+.coming-soon-badge { background: var(--orange); }
 
 .item-image-wrap {
   position: relative;
@@ -405,6 +418,13 @@ body {
 .modal-condition {
   font-size: 0.9rem;
   color: var(--text-light);
+  margin-bottom: 4px;
+}
+
+.modal-available-date {
+  font-size: 0.9rem;
+  color: var(--orange);
+  font-weight: 600;
   margin-bottom: 12px;
 }
 

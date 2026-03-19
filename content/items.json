@@ -4,9 +4,7 @@
     "slug": "exercise-bike",
     "category": "Other",
     "price": 60,
-    "retailPrice": 129,
-    "retailSource": "Amazon",
-    "condition": "Good",
+    "condition": "Like New",
     "description": "https://a.co/d/02Z7hNoR",
     "images": [
       "/images/items/1773893005877-img-7675.jpeg",
@@ -14,7 +12,8 @@
     ],
     "sold": false,
     "availableDate": "",
-    "order": 4
+    "order": 4,
+    "itemNumber": "O-1"
   },
   {
     "title": "Canon printer",
@@ -31,7 +30,8 @@
     ],
     "sold": false,
     "availableDate": "",
-    "order": 3
+    "order": 3,
+    "itemNumber": "E-3"
   },
   {
     "title": "Marshall speaker Stanmore II",
@@ -48,7 +48,8 @@
     ],
     "sold": false,
     "availableDate": "",
-    "order": 2
+    "order": 2,
+    "itemNumber": "E-2"
   },
   {
     "title": "Marshall speaker Acton II",
@@ -65,6 +66,7 @@
     ],
     "sold": false,
     "availableDate": "",
-    "order": 1
+    "order": 1,
+    "itemNumber": "E-1"
   }
 ]

@@ -3,7 +3,9 @@
    ============================================ */
 
 const PHONE = '+12065937974';
+const PHONE2 = '+12064766423';
 const EMAIL = 'cuttingthrough8@gmail.com';
+const EMAIL2 = 'tomomimcqueen@gmail.com';
 // --- Load Items ---
 let allItems = [];
 
@@ -122,12 +124,12 @@ function openItem(slug) {
 
   // SMS link
   const smsBody = encodeURIComponent(`Hi! I'm interested in "${item.title}" ($${item.price}) from your moving sale.`);
-  document.getElementById('modalSMS').href = `sms:${PHONE}?body=${smsBody}`;
+  document.getElementById('modalSMS').href = `sms:${PHONE},${PHONE2}?body=${smsBody}`;
 
-  // Email link
+  // Email link (CC Tomomi)
   const emailSubject = encodeURIComponent(`Enquiry: ${item.title} — Moving Sale`);
   const emailBody = encodeURIComponent(`Hi,\n\nI'm interested in "${item.title}" listed at $${item.price}.\n\nPlease let me know if it's still available.\n\nThanks!`);
-  document.getElementById('modalEmail').href = `mailto:${EMAIL}?subject=${emailSubject}&body=${emailBody}`;
+  document.getElementById('modalEmail').href = `mailto:${EMAIL}?cc=${EMAIL2}&subject=${emailSubject}&body=${emailBody}`;
 
   // Gallery
   currentImages = item.images && item.images.length > 0 ? item.images : ['/images/placeholder.svg'];

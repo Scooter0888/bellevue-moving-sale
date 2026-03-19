@@ -13,5 +13,6 @@
   ],
   "sold": false,
   "availableDate": "",
-  "order": 3
+  "order": 3,
+  "itemNumber": "E-3"
 }

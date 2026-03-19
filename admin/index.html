@@ -279,7 +279,7 @@
           <div class="item-row">
             <img src="${img}" alt="${item.title}">
             <div class="info">
-              <h3>${item.title} ${item.sold ? '<span style="color:#dc2626;font-size:0.75rem;">SOLD</span>' : ''}</h3>
+              <h3>${item.itemNumber ? `<span style="color:#2563eb;font-weight:700;">${item.itemNumber}</span> ` : ''}${item.title} ${item.sold ? '<span style="color:#dc2626;font-size:0.75rem;">SOLD</span>' : ''}</h3>
               <div class="meta">${item.category} &bull; ${item.condition || ''}</div>
             </div>
             <div class="price ${item.sold ? 'sold' : ''}">$${item.price}</div>
@@ -408,10 +408,25 @@
       const category = document.getElementById('fieldCategory').value;
       const availableDate = document.getElementById('fieldAvailableDate').value || '';
 
+      // Auto-assign item number
+      const existingItem = items.find(i => i.slug === slug);
+      let itemNumber = existingItem?.itemNumber || '';
+      if (!itemNumber) {
+        const prefixMap = { 'Furniture': 'F', 'Electronics': 'E', 'Kitchen': 'K', 'Other': 'O', 'Coming Soon': 'CS' };
+        const prefix = prefixMap[category] || 'X';
+        const sameCategory = items.filter(i => i.itemNumber && i.itemNumber.startsWith(prefix + '-'));
+        const maxNum = sameCategory.reduce((max, i) => {
+          const n = parseInt(i.itemNumber.split('-')[1]) || 0;
+          return n > max ? n : max;
+        }, 0);
+        itemNumber = `${prefix}-${maxNum + 1}`;
+      }
+
       const item = {
         title,
         slug,
         category,
+        itemNumber,
         price,
         retailPrice: parseInt(document.getElementById('fieldRetailPrice').value) || 0,
         retailSource: document.getElementById('fieldRetailSource').value,

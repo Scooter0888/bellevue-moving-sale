@@ -69,7 +69,7 @@ function renderItems() {
           ${photoCount > 1 ? `<span class="photo-count">${photoCount} photos</span>` : ''}
         </div>
         <div class="item-info">
-          <div class="item-category">${item.category}</div>
+          <div class="item-category">${item.itemNumber ? `<span class="item-number">${item.itemNumber}</span> ` : ''}${item.category}</div>
           <h3 class="item-title">${item.title}</h3>
           <div class="item-price">
             ${item.retailPrice ? `<span class="retail-price">$${item.retailPrice}${item.retailSource ? ' ' + item.retailSource : ''}</span> ` : ''}
@@ -105,7 +105,7 @@ function openItem(slug) {
   // Update URL hash
   history.pushState(null, '', '#' + slug);
 
-  document.getElementById('modalCategory').textContent = item.category;
+  document.getElementById('modalCategory').textContent = (item.itemNumber ? item.itemNumber + ' — ' : '') + item.category;
   document.getElementById('modalTitle').textContent = item.title;
   const priceEl = document.getElementById('modalPrice');
   if (item.retailPrice) {

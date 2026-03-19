@@ -3,7 +3,9 @@
   "slug": "marshall-speaker-acton-ii",
   "category": "Electronics",
   "price": 150,
-  "condition": "Like New",
+  "retailPrice": 249,
+  "retailSource": "Amazon",
+  "condition": "Good",
   "description": "",
   "images": [
     "/images/items/1773864941894-img-7653.jpeg",
@@ -11,5 +13,6 @@
   ],
   "sold": false,
   "availableDate": "",
-  "order": 1
+  "order": 1,
+  "itemNumber": "E-1"
 }

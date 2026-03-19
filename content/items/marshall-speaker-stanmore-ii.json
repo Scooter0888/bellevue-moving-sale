@@ -3,7 +3,9 @@
   "slug": "marshall-speaker-stanmore-ii",
   "category": "Electronics",
   "price": 250,
-  "condition": "Like New",
+  "retailPrice": 349,
+  "retailSource": "Amazon",
+  "condition": "Good",
   "description": "",
   "images": [
     "/images/items/1773865016709-img-7660.jpeg",
@@ -11,5 +13,6 @@
   ],
   "sold": false,
   "availableDate": "",
-  "order": 2
+  "order": 2,
+  "itemNumber": "E-2"
 }

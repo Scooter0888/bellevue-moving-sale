@@ -249,6 +249,15 @@ body {
   margin-bottom: 4px;
 }
 
+.item-number {
+  background: var(--accent);
+  color: white;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+}
+
 .item-title {
   font-size: 1.05rem;
   font-weight: 600;

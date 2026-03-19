@@ -11,5 +11,6 @@
   ],
   "sold": false,
   "availableDate": "",
-  "order": 4
+  "order": 4,
+  "itemNumber": "O-1"
 }

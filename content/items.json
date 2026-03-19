@@ -1,5 +1,22 @@
 [
   {
+    "title": "Exercise bike",
+    "slug": "exercise-bike",
+    "category": "Other",
+    "price": 60,
+    "retailPrice": 129,
+    "retailSource": "Amazon",
+    "condition": "Good",
+    "description": "https://a.co/d/02Z7hNoR",
+    "images": [
+      "/images/items/1773893005877-img-7675.jpeg",
+      "/images/items/1773893005911-img-7676.jpeg"
+    ],
+    "sold": false,
+    "availableDate": "",
+    "order": 4
+  },
+  {
     "title": "Canon printer",
     "slug": "canon-printer",
     "category": "Electronics",

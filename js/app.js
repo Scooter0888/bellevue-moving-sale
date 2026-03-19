@@ -200,16 +200,67 @@ async function shareItem(item, slug) {
   }
 }
 
-// --- Lightbox ---
+// --- Lightbox with swipe ---
+let lightboxIndex = 0;
+let touchStartX = 0;
+let touchStartY = 0;
+let touchMoved = false;
+
 function openLightbox(src) {
-  document.getElementById('lightboxImg').src = src;
+  lightboxIndex = currentImages.indexOf(src);
+  if (lightboxIndex < 0) lightboxIndex = 0;
+  renderLightbox();
   document.getElementById('lightboxOverlay').classList.add('active');
+}
+
+function renderLightbox() {
+  document.getElementById('lightboxImg').src = currentImages[lightboxIndex];
+  const counter = document.getElementById('lightboxCounter');
+  if (counter) {
+    counter.textContent = currentImages.length > 1 ? `${lightboxIndex + 1} / ${currentImages.length}` : '';
+  }
+}
+
+function lightboxNav(dir) {
+  lightboxIndex = (lightboxIndex + dir + currentImages.length) % currentImages.length;
+  renderLightbox();
 }
 
 function closeLightbox() {
   document.getElementById('lightboxOverlay').classList.remove('active');
   document.getElementById('lightboxImg').src = '';
 }
+
+// Swipe handling
+document.addEventListener('DOMContentLoaded', () => {
+  const overlay = document.getElementById('lightboxOverlay');
+
+  overlay.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+    touchMoved = false;
+  }, { passive: true });
+
+  overlay.addEventListener('touchmove', (e) => {
+    const dx = Math.abs(e.touches[0].clientX - touchStartX);
+    const dy = Math.abs(e.touches[0].clientY - touchStartY);
+    if (dx > 10 || dy > 10) touchMoved = true;
+  }, { passive: true });
+
+  overlay.addEventListener('touchend', (e) => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const absDx = Math.abs(dx);
+    const absDy = Math.abs(e.changedTouches[0].clientY - touchStartY);
+
+    if (absDx > 50 && absDx > absDy) {
+      // Horizontal swipe
+      if (dx < 0) lightboxNav(1);  // swipe left = next
+      else lightboxNav(-1);         // swipe right = prev
+    } else if (!touchMoved) {
+      closeLightbox();
+    }
+  });
+});
 
 // Deep link support
 function checkHash() {
@@ -234,8 +285,12 @@ document.getElementById('modalOverlay').addEventListener('click', (e) => {
   if (e.target === document.getElementById('modalOverlay')) closeModal();
 });
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') { closeLightbox(); closeModal(); }
-  if (document.getElementById('modalOverlay').classList.contains('active')) {
+  const lightboxOpen = document.getElementById('lightboxOverlay').classList.contains('active');
+  if (e.key === 'Escape') { if (lightboxOpen) closeLightbox(); else closeModal(); }
+  if (lightboxOpen) {
+    if (e.key === 'ArrowLeft') lightboxNav(-1);
+    if (e.key === 'ArrowRight') lightboxNav(1);
+  } else if (document.getElementById('modalOverlay').classList.contains('active')) {
     if (e.key === 'ArrowLeft') galleryNav(-1);
     if (e.key === 'ArrowRight') galleryNav(1);
   }

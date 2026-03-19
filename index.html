@@ -85,9 +85,12 @@
   </div>
 
   <!-- Lightbox -->
-  <div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox()">
+  <div class="lightbox-overlay" id="lightboxOverlay">
     <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <button class="lightbox-nav lightbox-prev" onclick="event.stopPropagation();lightboxNav(-1)">&lsaquo;</button>
     <img id="lightboxImg" src="" alt="Full size photo">
+    <button class="lightbox-nav lightbox-next" onclick="event.stopPropagation();lightboxNav(1)">&rsaquo;</button>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
   </div>
 
   <!-- Footer -->

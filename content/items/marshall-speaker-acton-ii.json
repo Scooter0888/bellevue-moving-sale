@@ -2,6 +2,7 @@
   "title": "Marshall speaker Acton II",
   "slug": "marshall-speaker-acton-ii",
   "category": "Electronics",
+  "itemNumber": "E-1",
   "price": 150,
   "retailPrice": 249,
   "retailSource": "Amazon",
@@ -13,6 +14,5 @@
   ],
   "sold": false,
   "availableDate": "",
-  "order": 1,
-  "itemNumber": "E-1"
+  "order": 1
 }

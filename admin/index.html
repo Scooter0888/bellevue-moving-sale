@@ -98,6 +98,7 @@
       <h1>Moving Sale Admin</h1>
       <div class="actions">
         <button class="btn btn-primary" onclick="showAddForm()">+ Add Item</button>
+        <button class="btn btn-success" onclick="lookupPrices()">Look Up Prices</button>
       </div>
     </div>
 
@@ -436,6 +437,28 @@
         cancelEdit();
       } catch (err) {
         toast('Error saving item');
+      }
+      hideLoading();
+    }
+
+    async function lookupPrices() {
+      showLoading('Looking up retail prices...');
+      try {
+        const res = await fetch('/.netlify/functions/price-lookup', {
+          method: 'POST',
+          headers: authHeaders(),
+        });
+        const data = await res.json();
+        if (data.updated && data.updated.length > 0) {
+          const names = data.updated.map(u => `${u.title}: $${u.retailPrice} ${u.retailSource}`).join('\n');
+          toast(`Updated ${data.updated.length} prices!`);
+          alert(`Prices updated:\n\n${names}\n\nSite will redeploy in ~30 seconds.`);
+          await loadItems();
+        } else {
+          toast(data.message || 'No items needed price updates');
+        }
+      } catch (err) {
+        toast('Error looking up prices');
       }
       hideLoading();
     }

@@ -4,6 +4,8 @@
     "slug": "canon-printer",
     "category": "Electronics",
     "price": 30,
+    "retailPrice": 99,
+    "retailSource": "Amazon",
     "condition": "Good",
     "description": "",
     "images": [
@@ -19,6 +21,8 @@
     "slug": "marshall-speaker-stanmore-ii",
     "category": "Electronics",
     "price": 250,
+    "retailPrice": 349,
+    "retailSource": "Amazon",
     "condition": "Good",
     "description": "",
     "images": [
@@ -26,6 +30,7 @@
       "/images/items/1773865016757-img-7661.jpeg"
     ],
     "sold": false,
+    "availableDate": "",
     "order": 2
   },
   {
@@ -33,6 +38,8 @@
     "slug": "marshall-speaker-acton-ii",
     "category": "Electronics",
     "price": 150,
+    "retailPrice": 249,
+    "retailSource": "Amazon",
     "condition": "Good",
     "description": "",
     "images": [
@@ -40,6 +47,7 @@
       "/images/items/1773864941939-img-7650.jpeg"
     ],
     "sold": false,
+    "availableDate": "",
     "order": 1
   }
 ]

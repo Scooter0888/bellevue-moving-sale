@@ -3,6 +3,8 @@
   "slug": "canon-printer",
   "category": "Electronics",
   "price": 30,
+  "retailPrice": 99,
+  "retailSource": "Amazon",
   "condition": "Good",
   "description": "",
   "images": [

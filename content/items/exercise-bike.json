@@ -2,7 +2,10 @@
   "title": "Exercise bike",
   "slug": "exercise-bike",
   "category": "Other",
+  "itemNumber": "O-1",
   "price": 60,
+  "retailPrice": 129,
+  "retailSource": "Amazon",
   "condition": "Like New",
   "description": "https://a.co/d/02Z7hNoR",
   "images": [
@@ -11,6 +14,5 @@
   ],
   "sold": false,
   "availableDate": "",
-  "order": 4,
-  "itemNumber": "O-1"
+  "order": 4
 }

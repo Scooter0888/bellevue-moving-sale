@@ -90,6 +90,12 @@ function slugify(text) {
   return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
+function linkify(text) {
+  // Escape HTML first, then convert URLs to links
+  const escaped = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  return escaped.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>');
+}
+
 function formatDate(dateStr) {
   if (!dateStr) return '';
   const d = new Date(dateStr + 'T00:00:00');
@@ -120,7 +126,7 @@ function openItem(slug) {
   const availEl = document.getElementById('modalAvailableDate');
   availEl.textContent = isComingSoon && item.availableDate ? `Available ${formatDate(item.availableDate)}` : '';
   availEl.style.display = isComingSoon && item.availableDate ? 'block' : 'none';
-  document.getElementById('modalDescription').textContent = item.description || '';
+  document.getElementById('modalDescription').innerHTML = linkify(item.description || '');
 
   // SMS link
   const smsBody = encodeURIComponent(`Hi! I'm interested in "${item.title}" ($${item.price}) from your moving sale.`);
@@ -147,7 +153,7 @@ function openItem(slug) {
 function renderGallery() {
   const gallery = document.getElementById('modalGallery');
   let html = currentImages.map((src, i) =>
-    `<img src="${src}" alt="Photo ${i + 1}" class="${i === currentGalleryIndex ? 'active' : ''}">`
+    `<img src="${src}" alt="Photo ${i + 1}" class="${i === currentGalleryIndex ? 'active' : ''}" onclick="openLightbox('${src}')" style="cursor:zoom-in">`
   ).join('');
 
   if (currentImages.length > 1) {
@@ -194,6 +200,17 @@ async function shareItem(item, slug) {
   }
 }
 
+// --- Lightbox ---
+function openLightbox(src) {
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightboxOverlay').classList.add('active');
+}
+
+function closeLightbox() {
+  document.getElementById('lightboxOverlay').classList.remove('active');
+  document.getElementById('lightboxImg').src = '';
+}
+
 // Deep link support
 function checkHash() {
   const hash = window.location.hash.slice(1);
@@ -217,7 +234,7 @@ document.getElementById('modalOverlay').addEventListener('click', (e) => {
   if (e.target === document.getElementById('modalOverlay')) closeModal();
 });
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeModal();
+  if (e.key === 'Escape') { closeLightbox(); closeModal(); }
   if (document.getElementById('modalOverlay').classList.contains('active')) {
     if (e.key === 'ArrowLeft') galleryNav(-1);
     if (e.key === 'ArrowRight') galleryNav(1);

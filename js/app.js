@@ -71,7 +71,10 @@ function renderItems() {
         <div class="item-info">
           <div class="item-category">${item.category}</div>
           <h3 class="item-title">${item.title}</h3>
-          <div class="item-price">${item.sold ? '<s>$' + item.price + '</s> SOLD' : '$' + item.price}</div>
+          <div class="item-price">
+            ${item.retailPrice ? `<span class="retail-price">$${item.retailPrice}${item.retailSource ? ' ' + item.retailSource : ''}</span> ` : ''}
+            ${item.sold ? '<s>$' + item.price + '</s> SOLD' : '$' + item.price}
+          </div>
           <div class="item-condition">${item.condition || ''}</div>
           ${isComingSoon && availDateStr ? `<div class="item-available-date">Available ${availDateStr}</div>` : ''}
         </div>
@@ -104,7 +107,12 @@ function openItem(slug) {
 
   document.getElementById('modalCategory').textContent = item.category;
   document.getElementById('modalTitle').textContent = item.title;
-  document.getElementById('modalPrice').textContent = item.sold ? `$${item.price} — SOLD` : `$${item.price}`;
+  const priceEl = document.getElementById('modalPrice');
+  if (item.retailPrice) {
+    priceEl.innerHTML = `<span class="retail-price">$${item.retailPrice}${item.retailSource ? ' ' + item.retailSource : ''}</span> ${item.sold ? `<s>$${item.price}</s> SOLD` : `$${item.price}`}`;
+  } else {
+    priceEl.textContent = item.sold ? `$${item.price} — SOLD` : `$${item.price}`;
+  }
   document.getElementById('modalCondition').textContent = item.condition ? `Condition: ${item.condition}` : '';
   const isComingSoon = item.category === 'Coming Soon';
   const availEl = document.getElementById('modalAvailableDate');

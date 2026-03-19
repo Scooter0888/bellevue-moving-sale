@@ -131,6 +131,27 @@
       </div>
 
       <div class="form-group">
+        <label>Retail Price ($)</label>
+        <input type="number" id="fieldRetailPrice" min="0" placeholder="349">
+        <div class="hint">Original retail price — shown as a comparison so buyers see the deal.</div>
+      </div>
+
+      <div class="form-group">
+        <label>Retail Source</label>
+        <select id="fieldRetailSource">
+          <option value="">— None —</option>
+          <option value="Amazon">Amazon</option>
+          <option value="Best Buy">Best Buy</option>
+          <option value="Walmart">Walmart</option>
+          <option value="Target">Target</option>
+          <option value="IKEA">IKEA</option>
+          <option value="Costco">Costco</option>
+          <option value="Manufacturer">Manufacturer</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
         <label>Condition</label>
         <select id="fieldCondition">
           <option value="New">New</option>
@@ -277,6 +298,8 @@
       document.getElementById('fieldTitle').value = '';
       document.getElementById('fieldCategory').value = 'Furniture';
       document.getElementById('fieldPrice').value = '';
+      document.getElementById('fieldRetailPrice').value = '';
+      document.getElementById('fieldRetailSource').value = '';
       document.getElementById('fieldCondition').value = 'Good';
       document.getElementById('fieldDescription').value = '';
       document.getElementById('fieldSold').checked = false;
@@ -296,6 +319,8 @@
       document.getElementById('fieldTitle').value = item.title;
       document.getElementById('fieldCategory').value = item.category;
       document.getElementById('fieldPrice').value = item.price;
+      document.getElementById('fieldRetailPrice').value = item.retailPrice || '';
+      document.getElementById('fieldRetailSource').value = item.retailSource || '';
       document.getElementById('fieldCondition').value = item.condition || 'Good';
       document.getElementById('fieldDescription').value = item.description || '';
       document.getElementById('fieldSold').checked = item.sold || false;
@@ -387,6 +412,8 @@
         slug,
         category,
         price,
+        retailPrice: parseInt(document.getElementById('fieldRetailPrice').value) || 0,
+        retailSource: document.getElementById('fieldRetailSource').value,
         condition: document.getElementById('fieldCondition').value,
         description: document.getElementById('fieldDescription').value.trim(),
         images: imageUrls,

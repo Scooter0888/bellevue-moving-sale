@@ -1,5 +1,20 @@
 [
   {
+    "title": "Canon printer",
+    "slug": "canon-printer",
+    "category": "Electronics",
+    "price": 30,
+    "condition": "Good",
+    "description": "",
+    "images": [
+      "/images/items/1773881115260-img-7459.jpeg",
+      "/images/items/1773881115307-img-7460.jpeg"
+    ],
+    "sold": false,
+    "availableDate": "",
+    "order": 3
+  },
+  {
     "title": "Marshall speaker Stanmore II",
     "slug": "marshall-speaker-stanmore-ii",
     "category": "Electronics",

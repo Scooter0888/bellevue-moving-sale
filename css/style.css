@@ -262,6 +262,13 @@ body {
   color: var(--green);
 }
 
+.retail-price {
+  text-decoration: line-through;
+  color: var(--text-light);
+  font-weight: 400;
+  font-size: 0.85em;
+}
+
 .item-condition {
   font-size: 0.8rem;
   color: var(--text-light);

@@ -3,7 +3,10 @@
     "title": "Exercise bike",
     "slug": "exercise-bike",
     "category": "Other",
+    "itemNumber": "O-1",
     "price": 60,
+    "retailPrice": 129,
+    "retailSource": "Amazon",
     "condition": "Like New",
     "description": "https://a.co/d/02Z7hNoR",
     "images": [
@@ -12,13 +15,13 @@
     ],
     "sold": false,
     "availableDate": "",
-    "order": 4,
-    "itemNumber": "O-1"
+    "order": 4
   },
   {
     "title": "Canon printer",
     "slug": "canon-printer",
     "category": "Electronics",
+    "itemNumber": "E-3",
     "price": 30,
     "retailPrice": 99,
     "retailSource": "Amazon",
@@ -30,17 +33,17 @@
     ],
     "sold": false,
     "availableDate": "",
-    "order": 3,
-    "itemNumber": "E-3"
+    "order": 3
   },
   {
     "title": "Marshall speaker Stanmore II",
     "slug": "marshall-speaker-stanmore-ii",
     "category": "Electronics",
+    "itemNumber": "E-2",
     "price": 250,
     "retailPrice": 349,
     "retailSource": "Amazon",
-    "condition": "Good",
+    "condition": "Like New",
     "description": "",
     "images": [
       "/images/items/1773865016709-img-7660.jpeg",
@@ -48,13 +51,13 @@
     ],
     "sold": false,
     "availableDate": "",
-    "order": 2,
-    "itemNumber": "E-2"
+    "order": 2
   },
   {
     "title": "Marshall speaker Acton II",
     "slug": "marshall-speaker-acton-ii",
     "category": "Electronics",
+    "itemNumber": "E-1",
     "price": 150,
     "retailPrice": 249,
     "retailSource": "Amazon",
@@ -66,7 +69,6 @@
     ],
     "sold": false,
     "availableDate": "",
-    "order": 1,
-    "itemNumber": "E-1"
+    "order": 1
   }
 ]

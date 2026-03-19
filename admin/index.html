@@ -59,10 +59,11 @@
 
     /* Image upload */
     .image-uploads { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
-    .image-thumb { position: relative; width: 100px; height: 75px; border-radius: 6px; overflow: hidden; background: #f0f0f0; }
+    .image-thumb { position: relative; width: 120px; height: 90px; border-radius: 6px; overflow: hidden; background: #f0f0f0; }
     .image-thumb img { width: 100%; height: 100%; object-fit: cover; }
     .image-thumb .remove-img { position: absolute; top: 2px; right: 2px; width: 22px; height: 22px; background: rgba(220,38,38,0.9); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 0.7rem; display: flex; align-items: center; justify-content: center; }
-    .add-image-btn { width: 100px; height: 75px; border: 2px dashed #ccc; border-radius: 6px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #aaa; font-size: 1.5rem; background: none; font-family: inherit; }
+    .image-thumb .rotate-img { position: absolute; bottom: 2px; right: 2px; width: 22px; height: 22px; background: rgba(37,99,235,0.9); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 0.7rem; display: flex; align-items: center; justify-content: center; }
+    .add-image-btn { width: 120px; height: 90px; border: 2px dashed #ccc; border-radius: 6px; display: flex; align-items: center; justify-content: center; cursor: pointer; color: #aaa; font-size: 1.5rem; background: none; font-family: inherit; }
     .add-image-btn:hover { border-color: #2563eb; color: #2563eb; }
 
     .form-actions { display: flex; gap: 8px; margin-top: 24px; padding-bottom: 40px; }
@@ -344,6 +345,7 @@
         <div class="image-thumb">
           <img src="${img.url || img.preview}">
           <button class="remove-img" onclick="removeImage(${i})">&times;</button>
+          <button class="rotate-img" onclick="rotateImage(${i})" title="Rotate 90°">↻</button>
         </div>
       `).join('') + `<button class="add-image-btn" onclick="document.getElementById('fileInput').click()">+</button>`;
     }
@@ -351,6 +353,45 @@
     function removeImage(index) {
       editImages.splice(index, 1);
       renderEditImages();
+    }
+
+    async function rotateImage(index) {
+      const img = editImages[index];
+      const src = img.url || img.preview;
+
+      // Load image into canvas
+      const image = new Image();
+      image.crossOrigin = 'anonymous';
+      image.src = src;
+      await new Promise((resolve, reject) => { image.onload = resolve; image.onerror = reject; });
+
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+
+      // Swap width/height for 90° rotation
+      canvas.width = image.height;
+      canvas.height = image.width;
+
+      // Rotate 90° clockwise
+      ctx.translate(canvas.width / 2, canvas.height / 2);
+      ctx.rotate(Math.PI / 2);
+      ctx.drawImage(image, -image.width / 2, -image.height / 2);
+
+      const rotatedDataUrl = canvas.toDataURL('image/jpeg', 0.9);
+      const base64Data = rotatedDataUrl.split(',')[1];
+      const ts = Date.now();
+      const filename = `${ts}-rotated.jpeg`;
+
+      // Replace the image entry — mark as new so it gets uploaded
+      editImages[index] = {
+        url: null,
+        preview: rotatedDataUrl,
+        isNew: true,
+        base64: base64Data,
+        filename,
+      };
+      renderEditImages();
+      toast('Photo rotated');
     }
 
     function handleFiles(files) {

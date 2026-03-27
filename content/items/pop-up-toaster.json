@@ -1,0 +1,18 @@
+{
+  "title": "Pop up toaster",
+  "slug": "pop-up-toaster",
+  "category": "Kitchen",
+  "itemNumber": "K-1",
+  "price": 10,
+  "retailPrice": 30,
+  "retailSource": "Amazon",
+  "condition": "Like New",
+  "description": "Used only once!",
+  "images": [
+    "/images/items/1774583847685-img-7862.jpeg",
+    "/images/items/1774583847726-img-7863.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 7
+}

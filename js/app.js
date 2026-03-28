@@ -78,7 +78,7 @@ function renderItems() {
             ${item.sold ? '<s>$' + item.price + '</s> SOLD' : '$' + item.price}
           </div>
           <div class="item-condition">${item.condition || ''}</div>
-          ${isComingSoon && availDateStr ? `<div class="item-available-date">Available ${availDateStr}</div>` : ''}
+          ${isComingSoon ? `<div class="item-available-date">Coming Soon</div>` : ''}
         </div>
       </div>
     `;
@@ -124,8 +124,8 @@ function openItem(slug) {
   document.getElementById('modalCondition').textContent = item.condition ? `Condition: ${item.condition}` : '';
   const isComingSoon = item.category === 'Coming Soon';
   const availEl = document.getElementById('modalAvailableDate');
-  availEl.textContent = isComingSoon && item.availableDate ? `Available ${formatDate(item.availableDate)}` : '';
-  availEl.style.display = isComingSoon && item.availableDate ? 'block' : 'none';
+  availEl.textContent = isComingSoon ? 'Coming Soon' : '';
+  availEl.style.display = isComingSoon ? 'block' : 'none';
   document.getElementById('modalDescription').innerHTML = linkify(item.description || '');
 
   // SMS link

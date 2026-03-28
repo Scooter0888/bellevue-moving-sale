@@ -396,7 +396,7 @@
 
     function handleFiles(files) {
       for (const file of files) {
-        if (file.size > 5 * 1024 * 1024) { toast('File too large (max 5MB)'); continue; }
+        if (file.size > 15 * 1024 * 1024) { toast('File too large (max 15MB)'); continue; }
         const reader = new FileReader();
         reader.onload = (e) => {
           const base64Full = e.target.result;

@@ -171,7 +171,7 @@
 
       <div class="form-group">
         <label>Photos</label>
-        <div class="hint">First photo is the cover image. Max 15MB each.</div>
+        <div class="hint">First photo is the cover image. Photos are auto-compressed before uploading.</div>
         <div class="image-uploads" id="imageUploads">
           <button class="add-image-btn" onclick="document.getElementById('fileInput').click()">+</button>
         </div>
@@ -394,21 +394,41 @@
       toast('Photo rotated');
     }
 
-    function handleFiles(files) {
-      for (const file of files) {
-        if (file.size > 15 * 1024 * 1024) { toast('File too large (max 15MB)'); continue; }
+    async function compressImage(file) {
+      return new Promise((resolve) => {
         const reader = new FileReader();
         reader.onload = (e) => {
-          const base64Full = e.target.result;
-          const base64Data = base64Full.split(',')[1];
-          const ext = file.name.split('.').pop().toLowerCase();
-          const ts = Date.now();
-          const safeName = file.name.replace(/[^a-z0-9.]/gi, '-').toLowerCase();
-          const filename = `${ts}-${safeName}`;
-          editImages.push({ url: null, preview: base64Full, isNew: true, base64: base64Data, filename });
-          renderEditImages();
+          const img = new Image();
+          img.onload = () => {
+            const MAX = 1800;
+            let w = img.width, h = img.height;
+            if (w > MAX || h > MAX) {
+              if (w > h) { h = Math.round(h * MAX / w); w = MAX; }
+              else { w = Math.round(w * MAX / h); h = MAX; }
+            }
+            const canvas = document.createElement('canvas');
+            canvas.width = w; canvas.height = h;
+            canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+            const dataUrl = canvas.toDataURL('image/jpeg', 0.85);
+            resolve(dataUrl);
+          };
+          img.src = e.target.result;
         };
         reader.readAsDataURL(file);
+      });
+    }
+
+    function handleFiles(files) {
+      for (const file of files) {
+        if (file.size > 50 * 1024 * 1024) { toast('File too large (max 50MB)'); continue; }
+        const ts = Date.now();
+        const safeName = file.name.replace(/[^a-z0-9.]/gi, '-').toLowerCase();
+        const filename = `${ts}-${safeName.replace(/\.[^.]+$/, '.jpeg')}`;
+        compressImage(file).then(dataUrl => {
+          const base64Data = dataUrl.split(',')[1];
+          editImages.push({ url: null, preview: dataUrl, isNew: true, base64: base64Data, filename });
+          renderEditImages();
+        });
       }
       document.getElementById('fileInput').value = '';
     }

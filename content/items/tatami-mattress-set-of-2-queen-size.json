@@ -8,7 +8,10 @@
   "retailSource": "",
   "condition": "Good",
   "description": "https://a.co/d/0cOirmEF",
-  "images": [],
+  "images": [
+    "/images/items/1774744405660-img-7810.jpeg",
+    "/images/items/1774744405660-img-7809.jpeg"
+  ],
   "sold": false,
   "availableDate": "",
   "order": 5

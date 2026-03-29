@@ -325,6 +325,10 @@ body {
   filter: grayscale(100%);
 }
 
+.item-card.coming-soon .item-image-wrap img {
+  filter: grayscale(100%);
+}
+
 .item-available-date {
   font-size: 0.75rem;
   color: var(--orange);

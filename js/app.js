@@ -10,6 +10,8 @@ const EMAIL2 = 'tomomimcqueen@gmail.com';
 let allItems = [];
 
 async function loadItems() {
+  const grid = document.getElementById('itemsGrid');
+  grid.innerHTML = '<div class="loading-items"><div class="loading-spinner"></div><p>Loading items…</p></div>';
   try {
     const res = await fetch('/.netlify/functions/api/items');
     allItems = await res.json();

@@ -1,5 +1,75 @@
 [
   {
+    "title": "Discontinued CB2 Solid Wood Bench – Architectural Minimal Styl",
+    "slug": "discontinued-cb2-solid-wood-bench-architectural-minimal-styl",
+    "category": "Furniture",
+    "itemNumber": "F-6",
+    "price": 150,
+    "retailPrice": 0,
+    "retailSource": "",
+    "condition": "Good",
+    "description": "Solid wood CB2 dining bench with a clean, modern minimalist design. Thick slab seat and sturdy construction — very solid and well-made.\n\nWorks great as a dining bench, entry bench, or accent piece.\n\nCondition: good overall. Minor signs of use consistent with normal wear (see photos).\n\nThis style is no longer sold, making it a great find if you like CB2’s older, heavier wood pieces.",
+    "images": [],
+    "sold": false,
+    "availableDate": "",
+    "order": 12
+  },
+  {
+    "title": "CB2 - EXCLUSIVE Blox 63\" Rectangular Brown Wood Dining Table",
+    "slug": "cb2-exclusive-blox-63-rectangular-brown-wood-dining-table",
+    "category": "Furniture",
+    "itemNumber": "F-5",
+    "price": 300,
+    "retailPrice": 799,
+    "retailSource": "Other",
+    "condition": "Good",
+    "description": "https://www.cb2.com/blox-63-rectangular-brown-wood-dining-table/s123863",
+    "images": [
+      "/images/items/1774745647436-img-7918.jpeg",
+      "/images/items/1774745656262-img-7922.jpeg"
+    ],
+    "sold": false,
+    "availableDate": "",
+    "order": 11
+  },
+  {
+    "title": "Tatami mattress Set of 2",
+    "slug": "tatami-mattress-set-of-2",
+    "category": "Furniture",
+    "itemNumber": "F-4",
+    "price": 60,
+    "retailPrice": 0,
+    "retailSource": "Amazon",
+    "condition": "Good",
+    "description": "https://a.co/d/0cOirmEF",
+    "images": [
+      "/images/items/1774744679977-img-7809.jpeg",
+      "/images/items/1774744679978-img-7810.jpeg"
+    ],
+    "sold": false,
+    "availableDate": "",
+    "order": 10
+  },
+  {
+    "title": "Classic Tan Leather Recliner Armchair with Nailhead Trim",
+    "slug": "classic-tan-leather-recliner-armchair-with-nailhead-trim",
+    "category": "Furniture",
+    "itemNumber": "F-3",
+    "price": 500,
+    "retailPrice": 1500,
+    "retailSource": "",
+    "condition": "Fair",
+    "description": "Tan leather recliner armchair in a classic style with nailhead trim. Very comfortable and works perfectly.\n\nCondition: used. There are some scratches, a stain on the leather, and one nailhead (stud) is missing, as shown in the photos. These are cosmetic only and do not affect function.\n\nGreat solid chair with lots of life left. Perfect for a living room, reading corner, or office.",
+    "images": [
+      "/images/items/1774744345388-img-7916.jpeg",
+      "/images/items/1774744345394-img-7917.jpeg",
+      "/images/items/1774744345395-img-7915.jpeg"
+    ],
+    "sold": false,
+    "availableDate": "",
+    "order": 9
+  },
+  {
     "title": "Floor lamp",
     "slug": "floor-lamp",
     "category": "Electronics",
@@ -30,7 +100,7 @@
       "/images/items/1774583847685-img-7862.jpeg",
       "/images/items/1774583847726-img-7863.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 7
   },
@@ -53,26 +123,11 @@
     "order": 6
   },
   {
-    "title": "Tatami mattress set of 2 (Queen size)",
-    "slug": "tatami-mattress-set-of-2-queen-size",
-    "category": "Furniture",
-    "itemNumber": "F-1",
-    "price": 60,
-    "retailPrice": 0,
-    "retailSource": "",
-    "condition": "Good",
-    "description": "https://a.co/d/0cOirmEF",
-    "images": [],
-    "sold": false,
-    "availableDate": "",
-    "order": 5
-  },
-  {
     "title": "Exercise bike",
     "slug": "exercise-bike",
     "category": "Other",
     "itemNumber": "O-1",
-    "price": 60,
+    "price": 50,
     "retailPrice": 129,
     "retailSource": "Amazon",
     "condition": "Like New",
@@ -81,7 +136,7 @@
       "/images/items/1773937553807-img-7674.jpeg",
       "/images/items/1773937575142-img-7675.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 4
   },
@@ -108,7 +163,7 @@
     "slug": "marshall-speaker-stanmore-ii",
     "category": "Electronics",
     "itemNumber": "E-2",
-    "price": 200,
+    "price": 150,
     "retailPrice": 349,
     "retailSource": "Amazon",
     "condition": "Like New",
@@ -117,7 +172,7 @@
       "/images/items/1773865016709-img-7660.jpeg",
       "/images/items/1773865016757-img-7661.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 2
   },
@@ -135,7 +190,7 @@
       "/images/items/1773864941894-img-7653.jpeg",
       "/images/items/1773864941939-img-7650.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 1
   }

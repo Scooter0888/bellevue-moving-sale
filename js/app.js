@@ -11,7 +11,7 @@ let allItems = [];
 
 async function loadItems() {
   try {
-    const res = await fetch('/content/items.json');
+    const res = await fetch('/.netlify/functions/api/items');
     allItems = await res.json();
   } catch {
     allItems = [];

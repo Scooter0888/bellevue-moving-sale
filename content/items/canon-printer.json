@@ -1,7 +1,7 @@
 {
   "title": "Canon printer",
   "slug": "canon-printer",
-  "category": "Electronics",
+  "category": "Coming Soon",
   "itemNumber": "E-3",
   "price": 30,
   "retailPrice": 99,
@@ -9,8 +9,8 @@
   "condition": "Good",
   "description": "",
   "images": [
-    "/images/items/1773881115260-img-7459.jpeg",
-    "/images/items/1773881115307-img-7460.jpeg"
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1773881115260-img-7459.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1773881115307-img-7460.jpeg"
   ],
   "sold": false,
   "availableDate": "",

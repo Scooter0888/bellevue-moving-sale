@@ -9,8 +9,8 @@
   "condition": "Good",
   "description": "Beautiful solid wood rocking chair",
   "images": [
-    "/images/items/1774583734737-img-7865.jpeg",
-    "/images/items/1774583734794-img-7866.jpeg"
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774583734737-img-7865.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774583734794-img-7866.jpeg"
   ],
   "sold": false,
   "availableDate": "",

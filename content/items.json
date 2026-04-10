@@ -1,5 +1,62 @@
 [
   {
+    "title": "SUP Stand Up Paddleboard by ROC",
+    "slug": "sup-stand-up-paddleboard-by-roc",
+    "category": "Other",
+    "itemNumber": "O-2",
+    "price": 200,
+    "retailPrice": 400,
+    "retailSource": "Amazon",
+    "condition": "Good",
+    "description": "ROC paddle boards. Used for only one season. Great condition. $200 for the pair or $100 each. \nhttps://www.amazon.com/dp/B0FYHV92VC?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_8&th=1",
+    "images": [
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1775778295461-whatsapp-image-2026-04-09-at-16.35.42--1-.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1775778295462-whatsapp-image-2026-04-09-at-16.35.42--2-.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1775778295462-whatsapp-image-2026-04-09-at-16.35.42.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1775778295462-whatsapp-image-2026-04-09-at-16.35.43--1-.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1775778295462-whatsapp-image-2026-04-09-at-16.35.43--2-.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1775778295463-whatsapp-image-2026-04-09-at-16.35.43.jpeg"
+    ],
+    "sold": false,
+    "availableDate": "",
+    "order": 15
+  },
+  {
+    "title": "76\"x34\" Floor Mirror Full Length, Bedroom Floor Body Mirror with Stand, Large Gold Mirror, Leaning, Standing or Hanging Horizontally/Vertically",
+    "slug": "76-x34-floor-mirror-full-length-bedroom-floor-body-mirror-with-stand-large-gold-mirror-leaning-standing-or-hanging-horizontally-vertically",
+    "category": "Furniture",
+    "itemNumber": "F-8",
+    "price": 50,
+    "retailPrice": 148,
+    "retailSource": "Amazon",
+    "condition": "Excellent",
+    "description": "https://a.co/d/01b3bYzL",
+    "images": [
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774761337730-img-7913.jpeg"
+    ],
+    "sold": false,
+    "availableDate": "",
+    "order": 14
+  },
+  {
+    "title": "IKEA dining chair set of 2",
+    "slug": "ikea-dining-chair-set-of-2",
+    "category": "Coming Soon",
+    "itemNumber": "F-7",
+    "price": 50,
+    "retailPrice": 0,
+    "retailSource": "IKEA",
+    "condition": "Good",
+    "description": "Acrylic paint as shown in picture",
+    "images": [
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774760015529-img-7920.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774760015530-img-7921.jpeg"
+    ],
+    "sold": false,
+    "availableDate": "",
+    "order": 13
+  },
+  {
     "title": "Discontinued CB2 Solid Wood Bench – Architectural Minimal Styl",
     "slug": "discontinued-cb2-solid-wood-bench-architectural-minimal-styl",
     "category": "Furniture",
@@ -7,9 +64,12 @@
     "price": 150,
     "retailPrice": 0,
     "retailSource": "",
-    "condition": "Good",
+    "condition": "Excellent",
     "description": "Solid wood CB2 dining bench with a clean, modern minimalist design. Thick slab seat and sturdy construction — very solid and well-made.\n\nWorks great as a dining bench, entry bench, or accent piece.\n\nCondition: good overall. Minor signs of use consistent with normal wear (see photos).\n\nThis style is no longer sold, making it a great find if you like CB2’s older, heavier wood pieces.",
-    "images": [],
+    "images": [
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774759793474-img-7928.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774759793475-img-7927.jpeg"
+    ],
     "sold": false,
     "availableDate": "",
     "order": 12
@@ -17,7 +77,7 @@
   {
     "title": "CB2 - EXCLUSIVE Blox 63\" Rectangular Brown Wood Dining Table",
     "slug": "cb2-exclusive-blox-63-rectangular-brown-wood-dining-table",
-    "category": "Furniture",
+    "category": "Coming Soon",
     "itemNumber": "F-5",
     "price": 300,
     "retailPrice": 799,
@@ -25,8 +85,8 @@
     "condition": "Good",
     "description": "https://www.cb2.com/blox-63-rectangular-brown-wood-dining-table/s123863",
     "images": [
-      "/images/items/1774745647436-img-7918.jpeg",
-      "/images/items/1774745656262-img-7922.jpeg"
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774745647436-img-7918.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774745656262-img-7922.jpeg"
     ],
     "sold": false,
     "availableDate": "",
@@ -43,8 +103,8 @@
     "condition": "Good",
     "description": "https://a.co/d/0cOirmEF",
     "images": [
-      "/images/items/1774744679977-img-7809.jpeg",
-      "/images/items/1774744679978-img-7810.jpeg"
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774744679977-img-7809.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774744679978-img-7810.jpeg"
     ],
     "sold": false,
     "availableDate": "",
@@ -55,15 +115,15 @@
     "slug": "classic-tan-leather-recliner-armchair-with-nailhead-trim",
     "category": "Furniture",
     "itemNumber": "F-3",
-    "price": 500,
-    "retailPrice": 1500,
+    "price": 200,
+    "retailPrice": 650,
     "retailSource": "",
-    "condition": "Fair",
+    "condition": "Used",
     "description": "Tan leather recliner armchair in a classic style with nailhead trim. Very comfortable and works perfectly.\n\nCondition: used. There are some scratches, a stain on the leather, and one nailhead (stud) is missing, as shown in the photos. These are cosmetic only and do not affect function.\n\nGreat solid chair with lots of life left. Perfect for a living room, reading corner, or office.",
     "images": [
-      "/images/items/1774744345388-img-7916.jpeg",
-      "/images/items/1774744345394-img-7917.jpeg",
-      "/images/items/1774744345395-img-7915.jpeg"
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774744345388-img-7916.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774744345394-img-7917.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774744345395-img-7915.jpeg"
     ],
     "sold": false,
     "availableDate": "",
@@ -77,10 +137,10 @@
     "price": 20,
     "retailPrice": 0,
     "retailSource": "",
-    "condition": "Good",
+    "condition": "Excellent",
     "description": "",
     "images": [
-      "/images/items/1774583911425-img-7861.jpeg"
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774583911425-img-7861.jpeg"
     ],
     "sold": false,
     "availableDate": "",
@@ -97,8 +157,8 @@
     "condition": "Like New",
     "description": "Used only once!",
     "images": [
-      "/images/items/1774583847685-img-7862.jpeg",
-      "/images/items/1774583847726-img-7863.jpeg"
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774583847685-img-7862.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774583847726-img-7863.jpeg"
     ],
     "sold": true,
     "availableDate": "",
@@ -115,8 +175,8 @@
     "condition": "Good",
     "description": "Beautiful solid wood rocking chair",
     "images": [
-      "/images/items/1774583734737-img-7865.jpeg",
-      "/images/items/1774583734794-img-7866.jpeg"
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774583734737-img-7865.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774583734794-img-7866.jpeg"
     ],
     "sold": false,
     "availableDate": "",
@@ -133,8 +193,8 @@
     "condition": "Like New",
     "description": "https://a.co/d/02Z7hNoR",
     "images": [
-      "/images/items/1773937553807-img-7674.jpeg",
-      "/images/items/1773937575142-img-7675.jpeg"
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1773937553807-img-7674.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1773937575142-img-7675.jpeg"
     ],
     "sold": true,
     "availableDate": "",
@@ -143,7 +203,7 @@
   {
     "title": "Canon printer",
     "slug": "canon-printer",
-    "category": "Electronics",
+    "category": "Coming Soon",
     "itemNumber": "E-3",
     "price": 30,
     "retailPrice": 99,
@@ -151,8 +211,8 @@
     "condition": "Good",
     "description": "",
     "images": [
-      "/images/items/1773881115260-img-7459.jpeg",
-      "/images/items/1773881115307-img-7460.jpeg"
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1773881115260-img-7459.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1773881115307-img-7460.jpeg"
     ],
     "sold": false,
     "availableDate": "",
@@ -169,8 +229,8 @@
     "condition": "Like New",
     "description": "",
     "images": [
-      "/images/items/1773865016709-img-7660.jpeg",
-      "/images/items/1773865016757-img-7661.jpeg"
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1773865016709-img-7660.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1773865016757-img-7661.jpeg"
     ],
     "sold": true,
     "availableDate": "",
@@ -187,8 +247,8 @@
     "condition": "Like New",
     "description": "",
     "images": [
-      "/images/items/1773864941894-img-7653.jpeg",
-      "/images/items/1773864941939-img-7650.jpeg"
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1773864941894-img-7653.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1773864941939-img-7650.jpeg"
     ],
     "sold": true,
     "availableDate": "",

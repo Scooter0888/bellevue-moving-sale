@@ -1,0 +1,17 @@
+{
+  "title": "Crepe maker",
+  "slug": "crepe-maker",
+  "category": "Kitchen",
+  "itemNumber": "K-4",
+  "price": 30,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Good",
+  "description": "From Amazon Japan",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1775786692492-img-8221.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 18
+}

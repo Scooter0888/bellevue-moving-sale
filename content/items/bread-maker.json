@@ -1,0 +1,22 @@
+{
+  "title": "Bread maker",
+  "slug": "bread-maker",
+  "category": "Kitchen",
+  "itemNumber": "K-7",
+  "price": 10,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Used",
+  "description": "From Japan",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1775787154002-img-8213.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1775787154003-img-8212.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1775787154003-img-8214.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1775787154004-img-8215.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1775787154004-img-8217.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1775787154004-img-8216.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 21
+}

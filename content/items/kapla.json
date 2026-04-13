@@ -1,0 +1,18 @@
+{
+  "title": "Kapla",
+  "slug": "kapla",
+  "category": "Other",
+  "itemNumber": "O-4",
+  "price": 50,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Good",
+  "description": "",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776116364852-img-7878.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776116364853-img-7879.jpeg"
+  ],
+  "sold": true,
+  "availableDate": "",
+  "order": 30
+}

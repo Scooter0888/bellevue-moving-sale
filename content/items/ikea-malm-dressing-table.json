@@ -1,0 +1,17 @@
+{
+  "title": "IKEA MALM dressing table",
+  "slug": "ikea-malm-dressing-table",
+  "category": "Furniture",
+  "itemNumber": "F-11",
+  "price": 50,
+  "retailPrice": 149,
+  "retailSource": "IKEA",
+  "condition": "Good",
+  "description": "https://www.ikea.com/us/en/p/malm-dressing-table-white-10203610/?gad_source=1&gad_campaignid=22443845418&gbraid=0AAAAAD27g7wZ8J8s8LIjxm35SwdP-42AV",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776117041500-img-7452.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 32
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Christmas Tree",
+  "slug": "christmas-tree",
+  "category": "Furniture",
+  "itemNumber": "F-15",
+  "price": 60,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Good",
+  "description": "Christmas tree with skirt and storage bag - not included ornaments",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776122467117-img-9099.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776122467116-img-6113.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776122467118-img-9230.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776122467118-img-8758.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776122467117-img-6129.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776122467119-img-0498.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776122467119-img-0499.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776122467120-img-0487.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776122467119-img-0496.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776122467118-img-1097.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776122475063-img-8314.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776122475064-img-8313.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 39
+}

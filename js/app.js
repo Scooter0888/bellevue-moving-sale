@@ -2,10 +2,6 @@
    Moving Sale — App Logic
    ============================================ */
 
-const PHONE = '+12065937974';
-const PHONE2 = '+12064766423';
-const EMAIL = 'cuttingthrough8@gmail.com';
-const EMAIL2 = 'tomomimcqueen@gmail.com';
 // --- Load Items ---
 let allItems = [];
 
@@ -129,10 +125,6 @@ function openItem(slug) {
   availEl.textContent = isComingSoon ? 'Coming Soon' : '';
   availEl.style.display = isComingSoon ? 'block' : 'none';
   document.getElementById('modalDescription').innerHTML = linkify(item.description || '');
-
-  // SMS link
-  const smsBody = encodeURIComponent(`Hi! I'm interested in "${item.title}" ($${item.price}) from your moving sale.`);
-  document.getElementById('modalSMS').href = `sms:${PHONE},${PHONE2}?body=${smsBody}`;
 
 
   // Gallery

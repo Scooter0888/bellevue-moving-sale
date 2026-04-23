@@ -695,15 +695,6 @@ body {
   box-shadow: 0 4px 12px rgba(22, 101, 52, 0.25);
 }
 
-.btn-email {
-  background: var(--accent);
-  color: white;
-}
-
-.btn-email:hover {
-  background: var(--accent-hover);
-  box-shadow: 0 4px 12px rgba(28, 25, 23, 0.2);
-}
 
 .btn-share {
   background: transparent;

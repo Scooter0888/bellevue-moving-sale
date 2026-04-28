@@ -2,6 +2,9 @@
    Moving Sale — App Logic
    ============================================ */
 
+const PHONE = '+12065937974';
+const PHONE2 = '+12064766423';
+
 // --- Load Items ---
 let allItems = [];
 
@@ -131,6 +134,10 @@ function openItem(slug) {
   currentImages = item.images && item.images.length > 0 ? item.images : ['/images/placeholder.svg'];
   currentGalleryIndex = 0;
   renderGallery();
+
+  // SMS
+  const smsBody = encodeURIComponent(`Hi! I'm interested in "${item.title}" ($${item.price}) from your moving sale.`);
+  document.getElementById('modalSMS').href = `sms:${PHONE},${PHONE2}?body=${smsBody}`;
 
   // Share
   document.getElementById('modalShare').onclick = () => shareItem(item, slug);

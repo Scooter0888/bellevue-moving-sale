@@ -1,0 +1,20 @@
+{
+  "title": "Puzzle table",
+  "slug": "puzzle-table",
+  "category": "Furniture",
+  "itemNumber": "F-16",
+  "price": 30,
+  "retailPrice": 79,
+  "retailSource": "Amazon",
+  "condition": "Good",
+  "description": "https://a.co/d/0hjAQftB",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777594984182-img-4973.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777594984186-img-5030.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777594984187-img-5138.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777595009048-img-8619.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 40
+}

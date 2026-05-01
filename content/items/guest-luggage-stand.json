@@ -1,0 +1,17 @@
+{
+  "title": "Guest Luggage stand",
+  "slug": "guest-luggage-stand",
+  "category": "Furniture",
+  "itemNumber": "F-17",
+  "price": 20,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Excellent",
+  "description": "Hotel like luggage stand for the guest",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777595246822-img-7454.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 41
+}

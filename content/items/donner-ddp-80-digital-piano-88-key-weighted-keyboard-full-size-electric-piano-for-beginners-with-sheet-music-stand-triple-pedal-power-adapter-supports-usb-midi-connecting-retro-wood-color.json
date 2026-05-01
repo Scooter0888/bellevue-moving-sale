@@ -1,7 +1,7 @@
 {
   "title": "Donner DDP-80 Digital Piano 88 Key Weighted Keyboard, Full-size Electric Piano for Beginners, with Sheet Music Stand, Triple Pedal, Power Adapter, Supports USB-MIDI Connecting, Retro Wood Color",
   "slug": "donner-ddp-80-digital-piano-88-key-weighted-keyboard-full-size-electric-piano-for-beginners-with-sheet-music-stand-triple-pedal-power-adapter-supports-usb-midi-connecting-retro-wood-color",
-  "category": "Coming Soon",
+  "category": "Electronics",
   "itemNumber": "CS-1",
   "price": 200,
   "retailPrice": 499,
@@ -12,7 +12,7 @@
     "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776115784088-img-7668.jpeg",
     "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776115784090-img-7664.jpeg"
   ],
-  "sold": false,
+  "sold": true,
   "availableDate": "",
   "order": 27
 }

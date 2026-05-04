@@ -1,0 +1,18 @@
+{
+  "title": "Dry foods dispenser",
+  "slug": "dry-foods-dispenser",
+  "category": "Kitchen",
+  "itemNumber": "K-12",
+  "price": 20,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Good",
+  "description": "We stored cereals.",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777857402080-img-8712.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777857402080-img-8713.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 44
+}

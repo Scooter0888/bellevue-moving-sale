@@ -1,0 +1,19 @@
+{
+  "title": "Stool",
+  "slug": "stool",
+  "category": "Furniture",
+  "itemNumber": "F-24",
+  "price": 30,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Good",
+  "description": "",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777858043771-img-8721.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777858043773-img-8722.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777858043773-img-8723.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 51
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Shower stool",
+  "slug": "shower-stool",
+  "category": "Furniture",
+  "itemNumber": "F-21",
+  "price": 30,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Good",
+  "description": "",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777857658271-img-8706.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 47
+}

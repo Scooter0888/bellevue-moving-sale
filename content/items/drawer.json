@@ -1,0 +1,17 @@
+{
+  "title": "Drawer",
+  "slug": "drawer",
+  "category": "Furniture",
+  "itemNumber": "F-22",
+  "price": 20,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Good",
+  "description": "",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777857698150-img-8709.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 48
+}

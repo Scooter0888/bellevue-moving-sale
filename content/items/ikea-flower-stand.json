@@ -1,0 +1,19 @@
+{
+  "title": "IKEA flower stand",
+  "slug": "ikea-flower-stand",
+  "category": "Furniture",
+  "itemNumber": "F-18",
+  "price": 20,
+  "retailPrice": 0,
+  "retailSource": "IKEA",
+  "condition": "Used",
+  "description": "",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777857229399-img-8718.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777857229400-img-8719.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777857229401-img-8720.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 42
+}

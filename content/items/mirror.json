@@ -1,0 +1,17 @@
+{
+  "title": "Mirror",
+  "slug": "mirror",
+  "category": "Furniture",
+  "itemNumber": "F-35",
+  "price": 20,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Good",
+  "description": "",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778443956313-img-7449.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 65
+}

@@ -2,8 +2,8 @@
    Moving Sale — App Logic
    ============================================ */
 
-const PHONE = '+12065937974';
-const PHONE2 = '+12064766423';
+const PHONE_TOMOMI = '+12064766423'; // Tomomi — receives all SMS enquiries
+const PHONE_SCOTT = '+12065937974';
 
 // --- Load Items ---
 let allItems = [];
@@ -137,7 +137,7 @@ function openItem(slug) {
 
   // SMS
   const smsBody = encodeURIComponent(`Hi! I'm interested in "${item.title}" ($${item.price}) from your moving sale.`);
-  document.getElementById('modalSMS').href = `sms:${PHONE},${PHONE2}?body=${smsBody}`;
+  document.getElementById('modalSMS').href = `sms:${PHONE_TOMOMI},${PHONE_SCOTT}?body=${smsBody}`;
 
   // Share
   document.getElementById('modalShare').onclick = () => shareItem(item, slug);

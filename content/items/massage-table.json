@@ -1,0 +1,17 @@
+{
+  "title": "Massage table",
+  "slug": "massage-table",
+  "category": "Furniture",
+  "itemNumber": "F-42",
+  "price": 25,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Used",
+  "description": "Has some scratches",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478571396-img-9061.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 72
+}

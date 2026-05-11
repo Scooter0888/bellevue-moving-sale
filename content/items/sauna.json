@@ -1,0 +1,19 @@
+{
+  "title": "Sauna",
+  "slug": "sauna",
+  "category": "Furniture",
+  "itemNumber": "F-45",
+  "price": 50,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Good",
+  "description": "",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478928359-img-0011.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478928360-img-0012.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478928360-img-0013.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 75
+}

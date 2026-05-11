@@ -9,7 +9,7 @@
   "condition": "Good",
   "description": "https://a.co/d/0hfr1cd6",
   "images": [],
-  "sold": false,
+  "sold": true,
   "availableDate": "",
   "order": 64
 }

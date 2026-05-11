@@ -1,0 +1,17 @@
+{
+  "title": "Dog crate",
+  "slug": "dog-crate",
+  "category": "Furniture",
+  "itemNumber": "F-43",
+  "price": 0,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Good",
+  "description": "https://a.co/d/0h2PjZf9",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478598661-img-9060.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 73
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Massage chair",
+  "slug": "massage-chair",
+  "category": "Furniture",
+  "itemNumber": "F-41",
+  "price": 25,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Good",
+  "description": "",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478483100-img-0010.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478483101-img-0009.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478483102-img-0008.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478483103-img-0007.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 71
+}

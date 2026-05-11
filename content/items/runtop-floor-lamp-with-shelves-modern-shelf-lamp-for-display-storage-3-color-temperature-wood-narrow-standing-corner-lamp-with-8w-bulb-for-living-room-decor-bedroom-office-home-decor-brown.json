@@ -8,7 +8,9 @@
   "retailSource": "",
   "condition": "Good",
   "description": "https://a.co/d/0hfr1cd6",
-  "images": [],
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778481899485-img-9065.jpeg"
+  ],
   "sold": true,
   "availableDate": "",
   "order": 64

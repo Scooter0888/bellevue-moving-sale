@@ -1,0 +1,19 @@
+{
+  "title": "Power Tower Exercise Gym",
+  "slug": "power-tower-exercise-gym",
+  "category": "Other",
+  "itemNumber": "O-10",
+  "price": 50,
+  "retailPrice": 160,
+  "retailSource": "Amazon",
+  "condition": "Good",
+  "description": "300 Lb. User Capacity; Protected with a 90-Day Parts & Labor Warranty; 84\" H x 41\" W x 57\" L Footprint.\nPush-up and Dip Stations, Knee-Raise and Pull-up Stations\nErgonomic Padding; Hand grips, back padding, and elbow padding are designed to keep you focused on your workout and remove distractions and discomfort\nhttps://www.amazon.com/dp/B0098MAYNY?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_6",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778609746970-picture2.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778609746971-picture3.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778609746971-picture4.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 78
+}

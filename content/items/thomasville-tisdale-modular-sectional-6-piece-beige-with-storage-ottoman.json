@@ -20,7 +20,7 @@
     "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776120383119-img-8310.jpeg",
     "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776120383119-img-8309.jpeg"
   ],
-  "sold": false,
+  "sold": true,
   "availableDate": "",
   "order": 35
 }

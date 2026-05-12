@@ -75,9 +75,17 @@
     .toast { position: fixed; bottom: 20px; right: 20px; background: #1a1a2e; color: white; padding: 12px 20px; border-radius: 8px; font-size: 0.9rem; z-index: 200; display: none; }
     .toast.active { display: block; }
 
+    /* Sales tally bar */
+    .sales-tally { background: #1a1a2e; color: white; padding: 12px 24px; display: flex; gap: 32px; align-items: center; }
+    .tally-stat { display: flex; flex-direction: column; gap: 2px; }
+    .tally-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.6; }
+    .tally-value { font-size: 1.3rem; font-weight: 700; }
+    .tally-value.money { color: #4ade80; }
+
     @media (max-width: 600px) {
       .item-row { flex-wrap: wrap; }
       .item-row .row-actions { width: 100%; justify-content: flex-end; }
+      .sales-tally { gap: 20px; flex-wrap: wrap; }
     }
   </style>
 </head>
@@ -100,6 +108,22 @@
       <div class="actions">
         <button class="btn btn-primary" onclick="showAddForm()">+ Add Item</button>
         <button class="btn btn-success" onclick="lookupPrices()">Look Up Prices</button>
+      </div>
+    </div>
+
+    <!-- Sales Tally -->
+    <div class="sales-tally" id="salesTally">
+      <div class="tally-stat">
+        <span class="tally-label">Total Sold</span>
+        <span class="tally-value money" id="tallyRevenue">$0</span>
+      </div>
+      <div class="tally-stat">
+        <span class="tally-label">Items Sold</span>
+        <span class="tally-value" id="tallySoldCount">0</span>
+      </div>
+      <div class="tally-stat">
+        <span class="tally-label">Items Available</span>
+        <span class="tally-value" id="tallyAvailCount">0</span>
       </div>
     </div>
 
@@ -267,6 +291,14 @@
     function renderItems() {
       const list = document.getElementById('itemsList');
       document.getElementById('editPanel').classList.remove('active');
+
+      // Update tally
+      const soldItems = items.filter(i => i.sold);
+      const availItems = items.filter(i => !i.sold && i.category !== 'Coming Soon');
+      const revenue = soldItems.reduce((sum, i) => sum + (Number(i.price) || 0), 0);
+      document.getElementById('tallyRevenue').textContent = '$' + revenue.toLocaleString();
+      document.getElementById('tallySoldCount').textContent = soldItems.length;
+      document.getElementById('tallyAvailCount').textContent = availItems.length;
 
       if (items.length === 0) {
         list.innerHTML = '<div class="empty-state"><p>No items yet. Click <strong>+ Add Item</strong> to get started.</p></div>';

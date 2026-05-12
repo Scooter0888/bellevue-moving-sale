@@ -37,10 +37,11 @@ function renderItems() {
     return matchCat && matchSearch;
   });
 
-  // Sort
+  // Sort — sold items always last regardless of sort mode
   if (sort === 'price-low') items.sort((a, b) => a.price - b.price);
   else if (sort === 'price-high') items.sort((a, b) => b.price - a.price);
   else items.sort((a, b) => (b.order || 0) - (a.order || 0)); // newest = highest order
+  items.sort((a, b) => (a.sold ? 1 : 0) - (b.sold ? 1 : 0));
 
   const grid = document.getElementById('itemsGrid');
   const noResults = document.getElementById('noResults');

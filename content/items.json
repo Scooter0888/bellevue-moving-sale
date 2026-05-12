@@ -1,5 +1,170 @@
 [
   {
+    "title": "Large hard-sided pet crate with metal door",
+    "slug": "large-hard-sided-pet-crate-with-metal-door",
+    "category": "Furniture",
+    "itemNumber": "F-46",
+    "price": 0,
+    "retailPrice": 0,
+    "retailSource": "",
+    "condition": "Good",
+    "description": "Missing the original screws, so zip ties are needed as a replacement to secure it.\n\nPreviously used for international transport from Japan to the U.S. with zip ties",
+    "images": [
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778479018077-img-0002.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778479018078-img-0003.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778479018078-img-0005.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778479018079-img-0006.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778479018079-img-0004.jpeg"
+    ],
+    "sold": false,
+    "availableDate": "",
+    "order": 76
+  },
+  {
+    "title": "Sauna",
+    "slug": "sauna",
+    "category": "Furniture",
+    "itemNumber": "F-45",
+    "price": 50,
+    "retailPrice": 0,
+    "retailSource": "",
+    "condition": "Good",
+    "description": "",
+    "images": [
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478928359-img-0011.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478928360-img-0012.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478928360-img-0013.jpeg"
+    ],
+    "sold": false,
+    "availableDate": "",
+    "order": 75
+  },
+  {
+    "title": "hammock",
+    "slug": "hammock",
+    "category": "Furniture",
+    "itemNumber": "F-44",
+    "price": 20,
+    "retailPrice": 0,
+    "retailSource": "",
+    "condition": "Good",
+    "description": "",
+    "images": [
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478850458-img-0016.jpeg"
+    ],
+    "sold": true,
+    "availableDate": "",
+    "order": 74
+  },
+  {
+    "title": "Dog crate",
+    "slug": "dog-crate",
+    "category": "Furniture",
+    "itemNumber": "F-43",
+    "price": 0,
+    "retailPrice": 0,
+    "retailSource": "",
+    "condition": "Good",
+    "description": "https://a.co/d/0h2PjZf9",
+    "images": [
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478598661-img-9060.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778481919715-img-9064.jpeg"
+    ],
+    "sold": true,
+    "availableDate": "",
+    "order": 73
+  },
+  {
+    "title": "Massage table",
+    "slug": "massage-table",
+    "category": "Furniture",
+    "itemNumber": "F-42",
+    "price": 25,
+    "retailPrice": 0,
+    "retailSource": "",
+    "condition": "Used",
+    "description": "Has some scratches\nNo bag",
+    "images": [
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478571396-img-9061.jpeg"
+    ],
+    "sold": false,
+    "availableDate": "",
+    "order": 72
+  },
+  {
+    "title": "Massage chair",
+    "slug": "massage-chair",
+    "category": "Furniture",
+    "itemNumber": "F-41",
+    "price": 25,
+    "retailPrice": 0,
+    "retailSource": "",
+    "condition": "Good",
+    "description": "",
+    "images": [
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478483100-img-0010.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478483101-img-0009.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478483102-img-0008.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478483103-img-0007.jpeg"
+    ],
+    "sold": false,
+    "availableDate": "",
+    "order": 71
+  },
+  {
+    "title": "KOUPA Height Adjustable Mobile Standing Desk 16×24 in,360° Flip Desk Stand Desks Home Office Table Standing for Small Space Offices,Easy to Assemble(Adjustable Height: 32in-47in)",
+    "slug": "koupa-height-adjustable-mobile-standing-desk-16-24-in-360-flip-desk-stand-desks-home-office-table-standing-for-small-space-offices-easy-to-assemble-adjustable-height-32in-47in",
+    "category": "Furniture",
+    "itemNumber": "F-40",
+    "price": 30,
+    "retailPrice": 0,
+    "retailSource": "",
+    "condition": "Good",
+    "description": "https://a.co/d/09uM8PU3",
+    "images": [
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478443654-img-0018.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478443656-img-0017.jpeg",
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478443657-img-0019.jpeg"
+    ],
+    "sold": false,
+    "availableDate": "",
+    "order": 70
+  },
+  {
+    "title": "Rack",
+    "slug": "rack",
+    "category": "Furniture",
+    "itemNumber": "F-39",
+    "price": 30,
+    "retailPrice": 0,
+    "retailSource": "",
+    "condition": "Good",
+    "description": "",
+    "images": [
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478059737-img-9025.jpeg"
+    ],
+    "sold": true,
+    "availableDate": "",
+    "order": 69
+  },
+  {
+    "title": "Bar stools set of two",
+    "slug": "bar-stools-set-of-two",
+    "category": "Furniture",
+    "itemNumber": "F-38",
+    "price": 30,
+    "retailPrice": 0,
+    "retailSource": "",
+    "condition": "Good",
+    "description": "",
+    "images": [
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778478002846-img-9024.jpeg"
+    ],
+    "sold": false,
+    "availableDate": "",
+    "order": 68
+  },
+  {
     "title": "Outside storage bench",
     "slug": "outside-storage-bench",
     "category": "Furniture",
@@ -13,7 +178,7 @@
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778444957435-img-8739.jpeg",
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778444957437-img-8740.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 67
   },
@@ -51,7 +216,7 @@
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778444208751-img-9030.jpeg",
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778444419251-img-7449.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 65
   },
@@ -65,8 +230,10 @@
     "retailSource": "",
     "condition": "Good",
     "description": "https://a.co/d/0hfr1cd6",
-    "images": [],
-    "sold": false,
+    "images": [
+      "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778481899485-img-9065.jpeg"
+    ],
+    "sold": true,
     "availableDate": "",
     "order": 64
   },
@@ -135,24 +302,24 @@
     "images": [
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777942106695-img-8743.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 60
   },
   {
-    "title": "Electric standing desk white/natural",
+    "title": "FREE!!  Electric standing desk white/natural",
     "slug": "electric-standing-desk",
     "category": "Furniture",
     "itemNumber": "F-30",
-    "price": 50,
+    "price": 0,
     "retailPrice": 0,
     "retailSource": "",
     "condition": "Good",
-    "description": "",
+    "description": "Tested but it didn't work so we are giving it away for free to anyone who can fix it and use it :)",
     "images": [
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777942203708-img-8627.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 59
   },
@@ -165,11 +332,11 @@
     "retailPrice": 0,
     "retailSource": "",
     "condition": "Good",
-    "description": "",
+    "description": "https://a.co/d/01xaZP7N",
     "images": [
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777943262566-img-8634.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 58
   },
@@ -186,7 +353,7 @@
     "images": [
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777943345553-img-8625.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 57
   },
@@ -203,7 +370,7 @@
     "images": [
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777943411625-img-8624.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 56
   },
@@ -220,7 +387,7 @@
     "images": [
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777943445288-img-8623.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 55
   },
@@ -240,7 +407,7 @@
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777858373154-img-8651.jpeg",
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777858373154-img-8653.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 54
   },
@@ -276,7 +443,7 @@
     "images": [
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777858161957-img-8655.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 52
   },
@@ -295,7 +462,7 @@
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777858043773-img-8722.jpeg",
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777858043773-img-8723.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 51
   },
@@ -316,7 +483,7 @@
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777857858692-img-8647.jpeg",
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777858003242-img-8724.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 50
   },
@@ -386,7 +553,7 @@
     "images": [
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777857611326-img-8707.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 46
   },
@@ -404,7 +571,7 @@
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777857571350-img-8711.jpeg",
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777857571350-img-8710.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 45
   },
@@ -442,7 +609,7 @@
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777857302563-img-8714.jpeg",
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777857302563-img-8717.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 43
   },
@@ -461,7 +628,7 @@
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777857229400-img-8719.jpeg",
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777857229401-img-8720.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 42
   },
@@ -491,7 +658,7 @@
     "retailPrice": 0,
     "retailSource": "",
     "condition": "Good",
-    "description": "Christmas tree with skirt and storage bag - not included ornaments",
+    "description": "Christmas tree with lights and skirt and storage bag - not included ornaments",
     "images": [
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776122467117-img-9099.jpeg",
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776122467116-img-6113.jpeg",
@@ -523,7 +690,7 @@
     "images": [
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776121644797-img-7458.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 38
   },
@@ -545,7 +712,7 @@
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776121075976-img-7455.jpeg",
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776121075976-img-7656.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 37
   },
@@ -588,7 +755,7 @@
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776120383119-img-8310.jpeg",
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776120383119-img-8309.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 35
   },
@@ -659,7 +826,7 @@
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776117688894-img-7463.jpeg",
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776117688895-img-7464.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 31
   },
@@ -712,7 +879,7 @@
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776115947178-img-8306.jpeg",
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1776115947178-img-8307.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 28
   },
@@ -826,7 +993,7 @@
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1775787229502-img-8208.jpeg",
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1775787229502-img-8206.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 22
   },
@@ -848,7 +1015,7 @@
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1775787154004-img-8217.jpeg",
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1775787154004-img-8216.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 21
   },
@@ -940,7 +1107,7 @@
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1775785700805-img-8230.jpeg",
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1775785700806-img-8229.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 16
   },
@@ -962,7 +1129,7 @@
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1775778295462-whatsapp-image-2026-04-09-at-16.35.43--2-.jpeg",
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1775778295463-whatsapp-image-2026-04-09-at-16.35.43.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 15
   },
@@ -979,7 +1146,7 @@
     "images": [
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774761337730-img-7913.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 14
   },
@@ -1051,7 +1218,7 @@
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774744679977-img-7809.jpeg",
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774744679978-img-7810.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 10
   },
@@ -1123,7 +1290,7 @@
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774583734737-img-7865.jpeg",
       "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1774583734794-img-7866.jpeg"
     ],
-    "sold": false,
+    "sold": true,
     "availableDate": "",
     "order": 6
   },

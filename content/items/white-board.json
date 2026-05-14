@@ -1,0 +1,17 @@
+{
+  "title": "White board",
+  "slug": "white-board",
+  "category": "Furniture",
+  "itemNumber": "F-60",
+  "price": 10,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Good",
+  "description": "",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778724452142-img-9149.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 98
+}

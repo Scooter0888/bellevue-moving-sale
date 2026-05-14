@@ -1,0 +1,18 @@
+{
+  "title": "Table lamp",
+  "slug": "table-lamp",
+  "category": "Electronics",
+  "itemNumber": "E-12",
+  "price": 20,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Good",
+  "description": "",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778723083876-img-9167.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778723083876-img-9166.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 88
+}

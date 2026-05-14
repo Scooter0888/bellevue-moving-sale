@@ -1,0 +1,17 @@
+{
+  "title": "Hanger rack",
+  "slug": "hanger-rack",
+  "category": "Furniture",
+  "itemNumber": "F-52",
+  "price": 15,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Good",
+  "description": "Light with wheels",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778722637093-img-9183.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 85
+}

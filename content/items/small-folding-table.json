@@ -1,0 +1,18 @@
+{
+  "title": "Small folding table",
+  "slug": "small-folding-table",
+  "category": "Furniture",
+  "itemNumber": "F-53",
+  "price": 20,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Excellent",
+  "description": "",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778722747770-img-9178.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778722747771-img-9180.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 86
+}

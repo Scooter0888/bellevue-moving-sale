@@ -6,12 +6,12 @@
   "price": 15,
   "retailPrice": 0,
   "retailSource": "",
-  "condition": "Used",
+  "condition": "Good",
   "description": "Pls clean before use",
   "images": [
-    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778886914092-img-9323.jpeg"
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778887288125-img-9303.jpeg"
   ],
   "sold": false,
   "availableDate": "",
-  "order": 103
+  "order": 107
 }

@@ -1,0 +1,18 @@
+{
+  "title": "Air purifier",
+  "slug": "air-purifier",
+  "category": "Furniture",
+  "itemNumber": "F-62",
+  "price": 20,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Used",
+  "description": "Pls clean before use",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778886723421-img-9324.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778886723421-img-9325.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 101
+}

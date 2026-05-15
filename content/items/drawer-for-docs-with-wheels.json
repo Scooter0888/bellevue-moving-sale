@@ -1,0 +1,19 @@
+{
+  "title": "drawer for docs with wheels",
+  "slug": "drawer-for-docs-with-wheels",
+  "category": "Furniture",
+  "itemNumber": "F-65",
+  "price": 30,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Good",
+  "description": "",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778887076657-img-9326.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778887076657-img-9327.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778887076658-img-9328.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 105
+}

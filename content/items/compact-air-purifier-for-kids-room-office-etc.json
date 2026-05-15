@@ -1,17 +1,15 @@
 {
-  "title": "Compact air purifier for kids room, office etc.",
+  "title": "Compact air purifier for kids room, office etc",
   "slug": "compact-air-purifier-for-kids-room-office-etc",
-  "category": "Furniture",
+  "category": "Electronics",
   "itemNumber": "F-63",
   "price": 15,
   "retailPrice": 0,
   "retailSource": "",
   "condition": "Used",
   "description": "Pls clean before use",
-  "images": [
-    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778886778325-img-9323.jpeg"
-  ],
+  "images": [],
   "sold": false,
   "availableDate": "",
-  "order": 102
+  "order": 103
 }

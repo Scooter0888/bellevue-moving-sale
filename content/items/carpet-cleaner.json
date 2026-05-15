@@ -1,0 +1,17 @@
+{
+  "title": "Carpet cleaner",
+  "slug": "carpet-cleaner",
+  "category": "Electronics",
+  "itemNumber": "E-14",
+  "price": 30,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Good",
+  "description": "Pick up is available on Sunday 24th May.",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778888529686-img-9209.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 121
+}

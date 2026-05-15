@@ -1,0 +1,17 @@
+{
+  "title": "Shelf",
+  "slug": "shelf",
+  "category": "Furniture",
+  "itemNumber": "F-73",
+  "price": 10,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Good",
+  "description": "",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778888131358-img-9316.jpeg"
+  ],
+  "sold": false,
+  "availableDate": "",
+  "order": 118
+}

@@ -8,7 +8,9 @@
   "retailSource": "",
   "condition": "Used",
   "description": "Pls clean before use",
-  "images": [],
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778886914092-img-9323.jpeg"
+  ],
   "sold": false,
   "availableDate": "",
   "order": 103

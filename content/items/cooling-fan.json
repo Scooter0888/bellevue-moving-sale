@@ -3,16 +3,15 @@
   "slug": "cooling-fan",
   "category": "Furniture",
   "itemNumber": "F-67",
-  "price": 10,
+  "price": 20,
   "retailPrice": 0,
   "retailSource": "",
   "condition": "Used",
-  "description": "Works but makes noise when it swings. Fixable with silicone spray etc or don’t swing",
+  "description": "",
   "images": [
-    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778887330543-img-9321.jpeg",
-    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778887430377-img-9322.jpeg"
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778887563437-img-9304.jpeg"
   ],
   "sold": false,
   "availableDate": "",
-  "order": 108
+  "order": 109
 }

@@ -1,17 +1,19 @@
 {
-  "title": "AK RACING GAMING CHAIR",
+  "title": "AK RACING GAMING CHAIR #1",
   "slug": "ak-racing-gaming-chair",
   "category": "Furniture",
   "itemNumber": "F-49",
   "price": 40,
-  "retailPrice": 350,
+  "retailPrice": 329,
   "retailSource": "",
   "condition": "Good",
   "description": "https://a.co/d/00tisTYA",
   "images": [
     "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778948549267-img-9285.jpeg",
-    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778948549268-img-9284.jpeg"
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778948549268-img-9284.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778950821063-img-9364.jpeg"
   ],
+  "videos": [],
   "sold": false,
   "availableDate": "",
   "order": 126

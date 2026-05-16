@@ -59,6 +59,7 @@ function renderItems() {
       ? item.images[0]
       : '/images/placeholder.svg';
     const photoCount = item.images ? item.images.length : 0;
+    const videoCount = item.videos ? item.videos.length : 0;
 
     const isComingSoon = item.category === 'Coming Soon';
     const cardClass = item.sold ? 'sold' : (isComingSoon ? 'coming-soon' : '');
@@ -71,6 +72,7 @@ function renderItems() {
         <div class="item-image-wrap">
           <img src="${img}" alt="${item.title}" loading="lazy">
           ${photoCount > 1 ? `<span class="photo-count">${photoCount} photos</span>` : ''}
+          ${videoCount > 0 ? `<span class="photo-count" style="bottom:28px;background:rgba(0,0,0,0.7);">&#9654; ${videoCount > 1 ? videoCount + ' videos' : 'video'}</span>` : ''}
         </div>
         <div class="item-info">
           <div class="item-category">${item.itemNumber ? `<span class="item-number">${item.itemNumber}</span> ` : ''}${item.category}</div>
@@ -135,6 +137,18 @@ function openItem(slug) {
   currentImages = item.images && item.images.length > 0 ? item.images : ['/images/placeholder.svg'];
   currentGalleryIndex = 0;
   renderGallery();
+
+  // Videos
+  const videosEl = document.getElementById('modalVideos');
+  if (item.videos && item.videos.length > 0) {
+    videosEl.innerHTML = item.videos.map(url =>
+      `<video src="${url}" controls playsinline preload="metadata" style="width:100%;border-radius:8px;margin-bottom:8px;background:#000;max-height:320px;display:block;"></video>`
+    ).join('');
+    videosEl.style.display = 'block';
+  } else {
+    videosEl.innerHTML = '';
+    videosEl.style.display = 'none';
+  }
 
   // SMS
   const smsBody = encodeURIComponent(`Hi! I'm interested in "${item.title}" ($${item.price}) from your moving sale.`);

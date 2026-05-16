@@ -76,6 +76,12 @@
     .sold-toggle { display: flex; align-items: center; gap: 8px; }
     .sold-toggle input[type="checkbox"] { width: 20px; height: 20px; }
 
+    /* Video upload */
+    .video-uploads { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+    .video-thumb { position: relative; width: 120px; height: 90px; border-radius: 6px; overflow: hidden; background: #111; display: flex; align-items: center; justify-content: center; }
+    .video-thumb video { width: 100%; height: 100%; object-fit: cover; }
+    .video-thumb .remove-vid { position: absolute; top: 2px; right: 2px; width: 22px; height: 22px; background: rgba(220,38,38,0.9); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 0.7rem; display: flex; align-items: center; justify-content: center; }
+
     .loading-overlay { position: fixed; inset: 0; background: rgba(255,255,255,0.8); display: none; align-items: center; justify-content: center; z-index: 100; font-weight: 600; font-size: 1.1rem; }
     .loading-overlay.active { display: flex; }
     .toast { position: fixed; bottom: 20px; right: 20px; background: #1a1a2e; color: white; padding: 12px 20px; border-radius: 8px; font-size: 0.9rem; z-index: 200; display: none; }
@@ -215,6 +221,15 @@
         <input type="file" id="fileInput" accept="image/*" multiple style="display:none" onchange="handleFiles(this.files)">
       </div>
 
+      <div class="form-group">
+        <label>Videos</label>
+        <div class="hint">Short clips showing the item. Uploaded directly to Cloudinary — no size limit.</div>
+        <div class="video-uploads" id="videoUploads">
+          <button class="add-image-btn" onclick="document.getElementById('videoInput').click()">&#9654; +</button>
+        </div>
+        <input type="file" id="videoInput" accept="video/*" multiple style="display:none" onchange="handleVideoFiles(this.files)">
+      </div>
+
       <div class="form-group" id="availableDateGroup">
         <label>Available From</label>
         <input type="date" id="fieldAvailableDate">
@@ -240,9 +255,12 @@
 
   <script>
     const API = '/.netlify/functions/api';
+    const CLOUDINARY_CLOUD = 'dvivqmgtm';
+    const CLOUDINARY_PRESET = 'Moving sale';
     let password = localStorage.getItem('admin_pw') || '';
     let items = [];
     let editImages = []; // { url, isNew, base64, filename }
+    let editVideos = []; // { url }
     let activeFilter = 'all';
 
     function setFilter(f) {
@@ -367,6 +385,8 @@
       document.getElementById('fieldAvailableDate').value = '';
       editImages = [];
       renderEditImages();
+      editVideos = [];
+      renderEditVideos();
       document.getElementById('itemsList').style.display = 'none';
       document.getElementById('editPanel').classList.add('active');
       document.getElementById('fieldTitle').focus();
@@ -388,6 +408,8 @@
       document.getElementById('fieldAvailableDate').value = item.availableDate || '';
       editImages = (item.images || []).map(url => ({ url, isNew: false }));
       renderEditImages();
+      editVideos = (item.videos || []).map(url => ({ url }));
+      renderEditVideos();
       document.getElementById('itemsList').style.display = 'none';
       document.getElementById('editPanel').classList.add('active');
     }
@@ -412,6 +434,55 @@
     function removeImage(index) {
       editImages.splice(index, 1);
       renderEditImages();
+    }
+
+    // --- Videos ---
+    function renderEditVideos() {
+      const container = document.getElementById('videoUploads');
+      container.innerHTML = editVideos.map((vid, i) => `
+        <div class="video-thumb">
+          <video src="${vid.url}" muted playsinline preload="metadata"></video>
+          <button class="remove-vid" onclick="removeVideo(${i})">&times;</button>
+        </div>
+      `).join('') + `<button class="add-image-btn" onclick="document.getElementById('videoInput').click()">&#9654; +</button>`;
+    }
+
+    function removeVideo(index) {
+      editVideos.splice(index, 1);
+      renderEditVideos();
+    }
+
+    async function handleVideoFiles(files) {
+      for (const file of files) {
+        if (file.size > 500 * 1024 * 1024) { toast('Video too large (max 500MB)'); continue; }
+        showLoading('Uploading video to Cloudinary...');
+        try {
+          const url = await uploadToCloudinary(file);
+          editVideos.push({ url });
+          renderEditVideos();
+          toast('Video uploaded');
+        } catch (err) {
+          toast('Video upload failed — try again');
+        }
+        hideLoading();
+      }
+      document.getElementById('videoInput').value = '';
+    }
+
+    async function uploadToCloudinary(file) {
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('upload_preset', CLOUDINARY_PRESET);
+      const res = await fetch(`https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD}/video/upload`, {
+        method: 'POST',
+        body: formData,
+      });
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.error?.message || 'Upload failed');
+      }
+      const data = await res.json();
+      return data.secure_url;
     }
 
     async function rotateImage(index) {
@@ -522,8 +593,17 @@
         }
       }
 
-      const slug = document.getElementById('editSlug').value ||
-        title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      // Generate slug — ensure uniqueness for new items to prevent overwriting existing ones
+      let slug = document.getElementById('editSlug').value;
+      if (!slug) {
+        const baseSlug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+        slug = baseSlug;
+        let counter = 2;
+        while (items.find(i => i.slug === slug)) {
+          slug = `${baseSlug}-${counter}`;
+          counter++;
+        }
+      }
 
       const category = document.getElementById('fieldCategory').value;
       const availableDate = document.getElementById('fieldAvailableDate').value || '';
@@ -553,6 +633,7 @@
         condition: document.getElementById('fieldCondition').value,
         description: document.getElementById('fieldDescription').value.trim(),
         images: imageUrls,
+        videos: editVideos.map(v => v.url),
         sold: document.getElementById('fieldSold').checked,
         availableDate: category === 'Coming Soon' ? availableDate : '',
         order: document.getElementById('editSlug').value

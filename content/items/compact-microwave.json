@@ -3,7 +3,7 @@
   "slug": "compact-microwave",
   "category": "Furniture",
   "itemNumber": "F-72",
-  "price": 40,
+  "price": 30,
   "retailPrice": 0,
   "retailSource": "",
   "condition": "Good",
@@ -15,6 +15,7 @@
     "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778887993131-img-9290.jpeg",
     "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778887993132-img-9291.jpeg"
   ],
+  "videos": [],
   "sold": false,
   "availableDate": "",
   "order": 116

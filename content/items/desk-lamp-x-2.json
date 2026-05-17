@@ -1,17 +1,18 @@
 {
-  "title": "Desk lamp x 2",
+  "title": "Desk lamp",
   "slug": "desk-lamp-x-2",
   "category": "Electronics",
   "itemNumber": "E-9",
-  "price": 40,
-  "retailPrice": 80,
+  "price": 15,
+  "retailPrice": 40,
   "retailSource": "Amazon",
   "condition": "Good",
-  "description": "Two for 40",
+  "description": "Two for 30",
   "images": [
     "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777943491232-img-8621.jpeg",
     "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777943491233-img-8622.jpeg"
   ],
+  "videos": [],
   "sold": false,
   "availableDate": "",
   "order": 61

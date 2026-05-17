@@ -5,12 +5,13 @@
   "itemNumber": "F-58",
   "price": 20,
   "retailPrice": 0,
-  "retailSource": "",
+  "retailSource": "Costco",
   "condition": "Good",
   "description": "",
   "images": [
     "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778724313209-img-9150.jpeg"
   ],
+  "videos": [],
   "sold": false,
   "availableDate": "",
   "order": 96

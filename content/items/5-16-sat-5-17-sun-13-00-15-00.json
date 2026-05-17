@@ -3,7 +3,7 @@
   "slug": "5-16-sat-5-17-sun-13-00-15-00",
   "category": "Other",
   "itemNumber": "O-13",
-  "price": 10,
+  "price": 0,
   "retailPrice": 0,
   "retailSource": "",
   "condition": "Good",
@@ -19,7 +19,8 @@
     "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778888717716-img-9266.jpeg",
     "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778888717717-img-9206.jpeg"
   ],
-  "sold": false,
+  "videos": [],
+  "sold": true,
   "availableDate": "",
   "order": 99
 }

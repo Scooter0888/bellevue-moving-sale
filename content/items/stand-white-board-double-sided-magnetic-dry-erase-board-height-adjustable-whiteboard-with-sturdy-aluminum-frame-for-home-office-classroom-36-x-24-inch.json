@@ -4,13 +4,15 @@
   "category": "Furniture",
   "itemNumber": "F-59",
   "price": 40,
-  "retailPrice": 0,
+  "retailPrice": 96,
   "retailSource": "",
   "condition": "Good",
   "description": "https://a.co/d/0iAGodQp",
   "images": [
-    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778724401777-img-9148.jpeg"
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778724401777-img-9148.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778976071541-img-9379.jpeg"
   ],
+  "videos": [],
   "sold": false,
   "availableDate": "",
   "order": 97

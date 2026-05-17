@@ -696,6 +696,16 @@ body {
 }
 
 
+.btn-venmo {
+  background: #3D95CE;
+  color: white;
+}
+
+.btn-venmo:hover {
+  background: #2f7eb5;
+  box-shadow: 0 4px 12px rgba(61, 149, 206, 0.3);
+}
+
 .btn-share {
   background: transparent;
   color: var(--text-secondary);

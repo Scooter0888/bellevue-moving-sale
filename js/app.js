@@ -150,6 +150,10 @@ function openItem(slug) {
     videosEl.style.display = 'none';
   }
 
+  // Venmo — pre-fills amount and item name as payment note
+  const venmoNote = encodeURIComponent(`Moving Sale - ${item.title}`);
+  document.getElementById('modalVenmo').href = `venmo://paycharge?txn=pay&recipients=Scott-McQueen-25&amount=${item.price}&note=${venmoNote}`;
+
   // SMS
   const smsBody = encodeURIComponent(`Hi! I'm interested in "${item.title}" ($${item.price}) from your moving sale.`);
   document.getElementById('modalSMS').href = `sms:${PHONE_TOMOMI},${PHONE_SCOTT}?body=${smsBody}`;

@@ -4,15 +4,17 @@
   "category": "Furniture",
   "itemNumber": "F-16",
   "price": 40,
-  "retailPrice": 0,
+  "retailPrice": 80,
   "retailSource": "",
   "condition": "Excellent",
   "description": "https://a.co/d/036jmkSl",
   "images": [
     "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777857773549-img-5030.jpeg",
     "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777857773549-img-4973.jpeg",
-    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777857785606-img-8619.jpeg"
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1777857785606-img-8619.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1778998674866-img-9104.jpeg"
   ],
+  "videos": [],
   "sold": false,
   "availableDate": "",
   "order": 49

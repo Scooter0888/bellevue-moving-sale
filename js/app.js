@@ -12,7 +12,7 @@ async function loadItems() {
   const grid = document.getElementById('itemsGrid');
   grid.innerHTML = '<div class="loading-items"><div class="loading-spinner"></div><p>Loading items…</p></div>';
   try {
-    const res = await fetch('/.netlify/functions/api/items');
+    const res = await fetch('/.netlify/functions/api/items?t=' + Date.now(), { cache: 'no-store' });
     allItems = await res.json();
   } catch {
     allItems = [];

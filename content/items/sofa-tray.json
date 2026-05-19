@@ -1,0 +1,20 @@
+{
+  "title": "Sofa tray",
+  "slug": "sofa-tray",
+  "category": "Furniture",
+  "itemNumber": "F-79",
+  "price": 10,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Good",
+  "description": "https://a.co/d/032i4lbE",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1779198598484-img-9480.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1779198598482-img-9479.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1779198670365-img-9530.jpeg"
+  ],
+  "videos": [],
+  "sold": false,
+  "availableDate": "",
+  "order": 129
+}

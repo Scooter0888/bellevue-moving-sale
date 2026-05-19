@@ -1,0 +1,18 @@
+{
+  "title": "IKEA rolling cart",
+  "slug": "ikea-rolling-cart",
+  "category": "Furniture",
+  "itemNumber": "F-92",
+  "price": 10,
+  "retailPrice": 0,
+  "retailSource": "",
+  "condition": "Used",
+  "description": "",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1779201384743-img-9488.jpeg"
+  ],
+  "videos": [],
+  "sold": false,
+  "availableDate": "",
+  "order": 146
+}

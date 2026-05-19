@@ -1,0 +1,20 @@
+{
+  "title": "Skateboard 🛹",
+  "slug": "skateboard",
+  "category": "Other",
+  "itemNumber": "O-14",
+  "price": 30,
+  "retailPrice": 129,
+  "retailSource": "Amazon",
+  "condition": "Used",
+  "description": "https://a.co/d/01gmgvad",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1779199829885-img-9515.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1779199829882-img-9513.jpeg",
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1779199829883-img-9514.jpeg"
+  ],
+  "videos": [],
+  "sold": false,
+  "availableDate": "",
+  "order": 136
+}

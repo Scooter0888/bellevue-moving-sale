@@ -1,0 +1,18 @@
+{
+  "title": "Gate",
+  "slug": "gate",
+  "category": "Furniture",
+  "itemNumber": "F-97",
+  "price": 5,
+  "retailPrice": 0,
+  "retailSource": "Amazon",
+  "condition": "Good",
+  "description": "",
+  "images": [
+    "https://raw.githubusercontent.com/Scooter0888/bellevue-moving-sale/main/images/items/1779397427425-c650cce0-98e7-4ddb-9651-45b53fbba9a9.jpeg"
+  ],
+  "videos": [],
+  "sold": true,
+  "availableDate": "",
+  "order": 152
+}
